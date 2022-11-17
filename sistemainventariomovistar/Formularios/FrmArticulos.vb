@@ -3,16 +3,16 @@ Public Class FrmArticulos
     Private Sub FrmArticulos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         desactivarcontroles()
         Llenardatos()
-        DgbArticulos.AutoGenerateColumns = False
-        DgbArticulos.Columns("PrecioCompra").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight 'centrar a la derecha
-        DgbArticulos.Columns("PrecioCompra").DefaultCellStyle.Format = "N2" 'decimales
+        Guna2DgbActivos.AutoGenerateColumns = False
+        Guna2DgbActivos.Columns("PrecioCompra").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight 'centrar a la derecha
+        Guna2DgbActivos.Columns("PrecioCompra").DefaultCellStyle.Format = "N2" 'decimales
     End Sub
 
 
     Sub desactivarcontroles()
         Guna2BtnGuardar.Enabled = False
         Guna2BntEditar.Enabled = False
-        BtnCancelar.Enabled = False
+        Guna2BtnCancelar.Enabled = False
         Guna2BtnBorrar.Enabled = False
 
         Guna2TxtNombreA.Enabled = False
@@ -21,12 +21,12 @@ Public Class FrmArticulos
         Guna2TxtPrecio.Enabled = False
         Guna2TxtDescripcion.Enabled = False
         Guna2DTPFechaEntrega.Enabled = False
-        BtnNuevo.Enabled = True
+        Guna2BtnNuevo.Enabled = True
     End Sub
     Sub activarcontroles()
         Guna2BtnGuardar.Enabled = True
         Guna2BntEditar.Enabled = False
-        BtnCancelar.Enabled = True
+        Guna2BtnCancelar.Enabled = True
         Guna2BtnBorrar.Enabled = False
 
         Guna2TxtNombreA.Enabled = True
@@ -35,7 +35,7 @@ Public Class FrmArticulos
         Guna2TxtPrecio.Enabled = True
         Guna2TxtDescripcion.Enabled = True
         Guna2DTPFechaEntrega.Enabled = True
-        BtnNuevo.Enabled = False
+        Guna2BtnNuevo.Enabled = False
     End Sub
     Sub limpiarcontroles()
         Guna2TxtNombreA.Text = ""
@@ -45,7 +45,7 @@ Public Class FrmArticulos
         Guna2TxtNSerie.Text = ""
         Guna2TxtPrecio.Text = ""
         TxtId.Text = ""
-        TxtBuscar.Text = ""
+        Guna2TxtBuscar.Text = ""
 
     End Sub
     Sub insertar()
@@ -83,57 +83,57 @@ Public Class FrmArticulos
 
     End Sub
     Sub buscardatos()
-        If rbNombreA.Checked Then
-            If TxtBuscar.Text = " " Then
+        If Guna2RbNombreA.Checked Then
+            If Guna2TxtBuscar.Text = " " Then
                 Llenardatos()
 
             End If
             adaptador = New SqlDataAdapter("SELECT Articulo.NombreA,Articulo.NumeroSerie,
             Articulo.CodigoA,Articulo.PrecioCompra,Articulo.FechaCompra,Articulo.EstadoArticulo,
-            Articulo.Descripcion FROM Articulo  WHERE Articulo.NombreA Like '%" & TxtBuscar.Text & "%' AND Articulo.EstadoArticulo='PENDIENTE' ", obtenerconexion)
+            Articulo.Descripcion FROM Articulo  WHERE Articulo.NombreA Like '%" & Guna2TxtBuscar.Text & "%' AND Articulo.EstadoArticulo='PENDIENTE' ", obtenerconexion)
             tabla.Clear()
             adaptador.Fill(tabla)
             If tabla.Rows.Count > 0 Then
-                DgbArticulos.DataSource = tabla
+                Guna2DgbActivos.DataSource = tabla
                 LblTotal.Text = tabla.Rows.Count
             Else
-                DgbArticulos.DataSource = ""
+                Guna2DgbActivos.DataSource = ""
             End If
 
         End If
-        If RbCodigoA.Checked Then
-            If TxtBuscar.Text = " " Then
+        If Guna2RbCodigoA.Checked Then
+            If Guna2TxtBuscar.Text = " " Then
                 Llenardatos()
 
             End If
             adaptador = New SqlDataAdapter("SELECT Articulo.NombreA,Articulo.NumeroSerie,
             Articulo.CodigoA,Articulo.PrecioCompra,Articulo.FechaCompra,Articulo.EstadoArticulo,
-            Articulo.Descripcion FROM Articulo  WHERE Articulo.CodigoA Like '%" & TxtBuscar.Text & "%' AND Articulo.EstadoArticulo='PENDIENTE' ", obtenerconexion)
+            Articulo.Descripcion FROM Articulo  WHERE Articulo.CodigoA Like '%" & Guna2TxtBuscar.Text & "%' AND Articulo.EstadoArticulo='PENDIENTE' ", obtenerconexion)
             tabla.Clear()
             adaptador.Fill(tabla)
             If tabla.Rows.Count > 0 Then
-                DgbArticulos.DataSource = tabla
+                Guna2DgbActivos.DataSource = tabla
                 LblTotal.Text = tabla.Rows.Count
             Else
-                DgbArticulos.DataSource = ""
+                Guna2DgbActivos.DataSource = ""
             End If
 
         End If
-        If Rbfecha.Checked Then
-            If TxtBuscar.Text = " " Then
+        If Guna2RbFecha.Checked Then
+            If Guna2TxtBuscar.Text = " " Then
                 Llenardatos()
 
             End If
             adaptador = New SqlDataAdapter("SELECT Articulo.NombreA,Articulo.NumeroSerie,
             Articulo.CodigoA,Articulo.PrecioCompra,Articulo.FechaCompra,Articulo.EstadoArticulo,
-            Articulo.Descripcion FROM Articulo  WHERE Articulo.FechaCompra Like '%" & TxtBuscar.Text & "%' AND Articulo.EstadoArticulo='PENDIENTE'", obtenerconexion)
+            Articulo.Descripcion FROM Articulo  WHERE Articulo.FechaCompra Like '%" & Guna2TxtBuscar.Text & "%' AND Articulo.EstadoArticulo='PENDIENTE'", obtenerconexion)
             tabla.Clear()
             adaptador.Fill(tabla)
             If tabla.Rows.Count > 0 Then
-                DgbArticulos.DataSource = tabla
+                Guna2DgbActivos.DataSource = tabla
                 LblTotal.Text = tabla.Rows.Count
             Else
-                DgbArticulos.DataSource = ""
+                Guna2DgbActivos.DataSource = ""
             End If
 
         End If
@@ -151,7 +151,7 @@ Public Class FrmArticulos
             Dim tabla As New DataTable
             adaptador = New SqlDataAdapter(sql, obtenerconexion)
             adaptador.Fill(tabla)
-            DgbArticulos.DataSource = tabla
+            Guna2DgbActivos.DataSource = tabla
             LblTotal.Text = tabla.Rows.Count
 
         Catch ex As Exception
@@ -159,55 +159,55 @@ Public Class FrmArticulos
         End Try
     End Sub
 
-    Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click, Guna2BtnNuevo.Click
+    Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles Guna2BtnNuevo.Click
         activarcontroles()
         limpiarcontroles()
 
     End Sub
 
-    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click, Guna2BtnGuardar.Click
+    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles Guna2BtnGuardar.Click
         insertar()
         Llenardatos()
         desactivarcontroles()
         limpiarcontroles()
     End Sub
 
-    Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click, Guna2BtnCancelar.Click
+    Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles Guna2BtnCancelar.Click
         desactivarcontroles()
         limpiarcontroles()
 
     End Sub
 
-    Private Sub RbCodigoA_CheckedChanged(sender As Object, e As EventArgs) Handles RbCodigoA.CheckedChanged
-        TxtBuscar.Focus()
+    Private Sub RbCodigoA_CheckedChanged(sender As Object, e As EventArgs)
+        Guna2TxtBuscar.Focus()
 
     End Sub
 
-    Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
+    Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs)
         buscardatos()
     End Sub
 
-    Private Sub rbNombreA_CheckedChanged(sender As Object, e As EventArgs) Handles rbNombreA.CheckedChanged
-        TxtBuscar.Focus()
+    Private Sub rbNombreA_CheckedChanged(sender As Object, e As EventArgs)
+        Guna2TxtBuscar.Focus()
 
     End Sub
 
-    Private Sub Rbfecha_CheckedChanged(sender As Object, e As EventArgs) Handles Rbfecha.CheckedChanged
-        TxtBuscar.Focus()
+    Private Sub Rbfecha_CheckedChanged(sender As Object, e As EventArgs)
+        Guna2TxtBuscar.Focus()
 
     End Sub
 
-    Private Sub DgbArticulos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgbArticulos.CellDoubleClick
+    Private Sub DgbArticulos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs)
         On Error Resume Next
 
-        TxtId.Text = CStr(DgbArticulos.Item("IdArticulo", DgbArticulos.CurrentCell.RowIndex).Value)
-        Guna2TxtNombreA.Text = CStr(DgbArticulos.Item("NombreA", DgbArticulos.CurrentCell.RowIndex).Value)
-        Guna2TxtCodigo.Text = CStr(DgbArticulos.Item("CodigoA", DgbArticulos.CurrentCell.RowIndex).Value)
-        Guna2TxtNSerie.Text = CStr(DgbArticulos.Item("NumeroSerie", DgbArticulos.CurrentCell.RowIndex).Value)
-        Guna2TxtPrecio.Text = CStr(DgbArticulos.Item("PrecioCompra", DgbArticulos.CurrentCell.RowIndex).Value)
-        Guna2TxtDescripcion.Text = CStr(DgbArticulos.Item("Descripcion", DgbArticulos.CurrentCell.RowIndex).Value)
-        Guna2DTPFechaEntrega.Text = CStr(DgbArticulos.Item("FechaCompra", DgbArticulos.CurrentCell.RowIndex).Value)
-        BtnCancelar.Enabled = True
+        TxtId.Text = CStr(Guna2DgbActivos.Item("IdArticulo", Guna2DgbActivos.CurrentCell.RowIndex).Value)
+        Guna2TxtNombreA.Text = CStr(Guna2DgbActivos.Item("NombreA", Guna2DgbActivos.CurrentCell.RowIndex).Value)
+        Guna2TxtCodigo.Text = CStr(Guna2DgbActivos.Item("CodigoA", Guna2DgbActivos.CurrentCell.RowIndex).Value)
+        Guna2TxtNSerie.Text = CStr(Guna2DgbActivos.Item("NumeroSerie", Guna2DgbActivos.CurrentCell.RowIndex).Value)
+        Guna2TxtPrecio.Text = CStr(Guna2DgbActivos.Item("PrecioCompra", Guna2DgbActivos.CurrentCell.RowIndex).Value)
+        Guna2TxtDescripcion.Text = CStr(Guna2DgbActivos.Item("Descripcion", Guna2DgbActivos.CurrentCell.RowIndex).Value)
+        Guna2DTPFechaEntrega.Text = CStr(Guna2DgbActivos.Item("FechaCompra", Guna2DgbActivos.CurrentCell.RowIndex).Value)
+        Guna2BtnCancelar.Enabled = True
         Guna2BntEditar.Enabled = True
         Guna2BtnBorrar.Enabled = True
 
@@ -219,17 +219,17 @@ Public Class FrmArticulos
         Guna2DTPFechaEntrega.Enabled = True
         Guna2TxtNombreA.Focus()
         BtnBuscar.Enabled = False
-        BtnNuevo.Enabled = False
+        Guna2BtnNuevo.Enabled = False
     End Sub
 
-    Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click, Guna2BntEditar.Click
+    Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles Guna2BntEditar.Click
         Editar()
         desactivarcontroles()
         Llenardatos()
 
     End Sub
 
-    Private Sub BtnBorrar_Click(sender As Object, e As EventArgs) Handles BtnBorrar.Click, Guna2BtnBorrar.Click
+    Private Sub BtnBorrar_Click(sender As Object, e As EventArgs) Handles Guna2BtnBorrar.Click
         Eliminar()
         desactivarcontroles()
         Llenardatos()
@@ -280,11 +280,15 @@ Public Class FrmArticulos
         End If
     End Sub
 
-    Private Sub TxtPrecio_TextChanged(sender As Object, e As EventArgs) Handles TxtPrecio.TextChanged
+    Private Sub TxtPrecio_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub Guna2TxtCodigo_TextChanged(sender As Object, e As EventArgs) Handles Guna2TxtNombreA.TextChanged
 
+    End Sub
+
+    Private Sub Guna2BtnExit_Click(sender As Object, e As EventArgs) Handles Guna2BtnExit.Click
+        Me.Close()
     End Sub
 End Class
