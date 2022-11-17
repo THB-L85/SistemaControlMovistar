@@ -9,57 +9,57 @@ Public Class FrmBuscarArticulos
 
 
     Sub buscardatos()
-        If rbNombreA.Checked Then
-            If TxtBuscar.Text = " " Then
+        If Guna2RbNombreA.Checked Then
+            If Guna2TxtBuscar.Text = " " Then
                 Llenardatos()
 
             End If
             adaptador = New SqlDataAdapter("SELECT Articulo.NombreA,Articulo.NumeroSerie,
             Articulo.CodigoA,Articulo.PrecioCompra,Articulo.FechaCompra,Articulo.EstadoArticulo,
-            Articulo.Descripcion FROM Articulo  WHERE Articulo.NombreA Like '%" & TxtBuscar.Text & "%' AND Articulo.EstadoArticulo='PENDIENTE' ", obtenerconexion)
+            Articulo.Descripcion FROM Articulo  WHERE Articulo.NombreA Like '%" & Guna2TxtBuscar.Text & "%' AND Articulo.EstadoArticulo='PENDIENTE' ", obtenerconexion)
             tabla.Clear()
             adaptador.Fill(tabla)
             If tabla.Rows.Count > 0 Then
-                DgbArticulos.DataSource = tabla
+                Guna2DgbArticulos.DataSource = tabla
                 LblTotal.Text = tabla.Rows.Count
             Else
-                DgbArticulos.DataSource = ""
+                Guna2DgbArticulos.DataSource = ""
             End If
 
         End If
-        If RbCodigoA.Checked Then
-            If TxtBuscar.Text = " " Then
+        If Guna2RbnCodigoA.Checked Then
+            If Guna2TxtBuscar.Text = " " Then
                 Llenardatos()
 
             End If
             adaptador = New SqlDataAdapter("SELECT Articulo.NombreA,Articulo.NumeroSerie,
             Articulo.CodigoA,Articulo.PrecioCompra,Articulo.FechaCompra,Articulo.EstadoArticulo,
-            Articulo.Descripcion FROM Articulo  WHERE Articulo.CodigoA Like '%" & TxtBuscar.Text & "%' AND Articulo.EstadoArticulo='PENDIENTE' ", obtenerconexion)
+            Articulo.Descripcion FROM Articulo  WHERE Articulo.CodigoA Like '%" & Guna2TxtBuscar.Text & "%' AND Articulo.EstadoArticulo='PENDIENTE' ", obtenerconexion)
             tabla.Clear()
             adaptador.Fill(tabla)
             If tabla.Rows.Count > 0 Then
-                DgbArticulos.DataSource = tabla
+                Guna2DgbArticulos.DataSource = tabla
                 LblTotal.Text = tabla.Rows.Count
             Else
-                DgbArticulos.DataSource = ""
+                Guna2DgbArticulos.DataSource = ""
             End If
 
         End If
-        If Rbfecha.Checked Then
-            If TxtBuscar.Text = " " Then
+        If Guna2RbFecha.Checked Then
+            If Guna2TxtBuscar.Text = " " Then
                 Llenardatos()
 
             End If
             adaptador = New SqlDataAdapter("SELECT Articulo.NombreA,Articulo.NumeroSerie,
             Articulo.CodigoA,Articulo.PrecioCompra,Articulo.FechaCompra,Articulo.EstadoArticulo,
-            Articulo.Descripcion FROM Articulo  WHERE Articulo.FechaCompra Like '%" & TxtBuscar.Text & "%' AND Articulo.EstadoArticulo='PENDIENTE'", obtenerconexion)
+            Articulo.Descripcion FROM Articulo  WHERE Articulo.FechaCompra Like '%" & Guna2TxtBuscar.Text & "%' AND Articulo.EstadoArticulo='PENDIENTE'", obtenerconexion)
             tabla.Clear()
             adaptador.Fill(tabla)
             If tabla.Rows.Count > 0 Then
-                DgbArticulos.DataSource = tabla
+                Guna2DgbArticulos.DataSource = tabla
                 LblTotal.Text = tabla.Rows.Count
             Else
-                DgbArticulos.DataSource = ""
+                Guna2DgbArticulos.DataSource = ""
             End If
 
         End If
@@ -77,7 +77,7 @@ Public Class FrmBuscarArticulos
             Dim tabla As New DataTable
             adaptador = New SqlDataAdapter(sql, obtenerconexion)
             adaptador.Fill(tabla)
-            DgbArticulos.DataSource = tabla
+            Guna2DgbArticulos.DataSource = tabla
             LblTotal.Text = tabla.Rows.Count
 
         Catch ex As Exception
@@ -85,18 +85,18 @@ Public Class FrmBuscarArticulos
         End Try
     End Sub
 
-    Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
+    Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles Guna2TxtBuscar.TextChanged
         buscardatos()
 
     End Sub
     Dim FrmcargoActivos As New FrmCargoActivos
-    Private Sub DgbArticulos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgbArticulos.CellDoubleClick
+    Private Sub DgbArticulos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles Guna2DgbArticulos.CellDoubleClick
         On Error Resume Next
 
-        FrmCargoActivos.TxtIdArticulo.Text = CStr(DgbArticulos.Item("IdArticulo", DgbArticulos.CurrentCell.RowIndex).Value)
-        FrmcargoActivos.Guna2TxtNombreArt.Text = CStr(DgbArticulos.Item("NombreA", DgbArticulos.CurrentCell.RowIndex).Value)
-        FrmcargoActivos.Guna2TxtNSerie.Text = CStr(DgbArticulos.Item("NumeroSerie", DgbArticulos.CurrentCell.RowIndex).Value)
-        FrmcargoActivos.Guna2TxtCodigo.Text = CStr(DgbArticulos.Item("CodigoA", DgbArticulos.CurrentCell.RowIndex).Value)
+        FrmcargoActivos.TxtIdArticulo.Text = CStr(Guna2DgbArticulos.Item("IdArticulo", Guna2DgbArticulos.CurrentCell.RowIndex).Value)
+        FrmcargoActivos.Guna2TxtNombreArt.Text = CStr(Guna2DgbArticulos.Item("NombreA", Guna2DgbArticulos.CurrentCell.RowIndex).Value)
+        FrmcargoActivos.Guna2TxtNSerie.Text = CStr(Guna2DgbArticulos.Item("NumeroSerie", Guna2DgbArticulos.CurrentCell.RowIndex).Value)
+        FrmcargoActivos.Guna2TxtCodigo.Text = CStr(Guna2DgbArticulos.Item("CodigoA", Guna2DgbArticulos.CurrentCell.RowIndex).Value)
         Me.Close()
 
     End Sub

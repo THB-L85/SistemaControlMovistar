@@ -10,40 +10,40 @@ Public Class FrmArticulos
 
 
     Sub desactivarcontroles()
-        BtnGuardar.Enabled = False
-        BtnEditar.Enabled = False
+        Guna2BtnGuardar.Enabled = False
+        Guna2BntEditar.Enabled = False
         BtnCancelar.Enabled = False
-        BtnBorrar.Enabled = False
+        Guna2BtnBorrar.Enabled = False
 
-        txtNombreA.Enabled = False
-        TxtCodigo.Enabled = False
-        TxtNserie.Enabled = False
-        TxtPrecio.Enabled = False
-        TxtDescripcion.Enabled = False
-        DTPFechacompra.Enabled = False
+        Guna2TxtNombreA.Enabled = False
+        Guna2TxtCodigo.Enabled = False
+        Guna2TxtNSerie.Enabled = False
+        Guna2TxtPrecio.Enabled = False
+        Guna2TxtDescripcion.Enabled = False
+        Guna2DTPFechaEntrega.Enabled = False
         BtnNuevo.Enabled = True
     End Sub
     Sub activarcontroles()
-        BtnGuardar.Enabled = True
-        BtnEditar.Enabled = False
+        Guna2BtnGuardar.Enabled = True
+        Guna2BntEditar.Enabled = False
         BtnCancelar.Enabled = True
-        BtnBorrar.Enabled = False
+        Guna2BtnBorrar.Enabled = False
 
-        txtNombreA.Enabled = True
-        TxtCodigo.Enabled = True
-        TxtNserie.Enabled = True
-        TxtPrecio.Enabled = True
-        TxtDescripcion.Enabled = True
-        DTPFechacompra.Enabled = True
+        Guna2TxtNombreA.Enabled = True
+        Guna2TxtCodigo.Enabled = True
+        Guna2TxtNSerie.Enabled = True
+        Guna2TxtPrecio.Enabled = True
+        Guna2TxtDescripcion.Enabled = True
+        Guna2DTPFechaEntrega.Enabled = True
         BtnNuevo.Enabled = False
     End Sub
     Sub limpiarcontroles()
-        txtNombreA.Text = ""
-        TxtCodigo.Text = ""
-        TxtDescripcion.Text = ""
-        DTPFechacompra.Text = ""
-        TxtNserie.Text = ""
-        TxtPrecio.Text = ""
+        Guna2TxtNombreA.Text = ""
+        Guna2TxtCodigo.Text = ""
+        Guna2TxtDescripcion.Text = ""
+        Guna2DTPFechaEntrega.Text = ""
+        Guna2TxtNSerie.Text = ""
+        Guna2TxtPrecio.Text = ""
         TxtId.Text = ""
         TxtBuscar.Text = ""
 
@@ -55,22 +55,22 @@ Public Class FrmArticulos
             Exit Sub
 
         End If
-        adaptador = New SqlDataAdapter("SELECT * FROM Articulo Where CodigoA = '" & TxtCodigo.Text & "' ", obtenerconexion)
+        adaptador = New SqlDataAdapter("SELECT * FROM Articulo Where CodigoA = '" & Guna2TxtCodigo.Text & "' ", obtenerconexion)
         tabla.Clear() 'borra datos que trae datatable
         adaptador.Fill(tabla) 'actualiza o agrega dataset
         If tabla.Rows.Count > 0 Then
-            TxtCodigo.Text = tabla.Rows(0).Item("CodigoA")
+            Guna2TxtCodigo.Text = tabla.Rows(0).Item("CodigoA")
             MsgBox("El registro ya se encuentra en la base de datos ", vbInformation, "Sistema inventario")
             Exit Sub
 
         End If
-        If txtNombreA.Text = "" Or TxtCodigo.Text = "" Then
+        If Guna2TxtNombreA.Text = "" Or Guna2TxtCodigo.Text = "" Then
             MsgBox("Completar todos los campos", vbCritical, "Sistema inventario")
             Exit Sub
         Else
             sql = "INSERT INTO Articulo(NombreA,NumeroSerie,CodigoA,PrecioCompra,FechaCompra,EstadoArticulo,Descripcion)" & " VALUES
-           ('" & txtNombreA.Text & "','" & TxtNserie.Text & "','" & TxtCodigo.Text & "','" & TxtPrecio.Text & "',
-           '" & DTPFechacompra.Text & "','PENDIENTE','" & TxtDescripcion.Text & "')"
+           ('" & Guna2TxtNombreA.Text & "','" & Guna2TxtNSerie.Text & "','" & Guna2TxtCodigo.Text & "','" & Guna2TxtPrecio.Text & "',
+           '" & Guna2DTPFechaEntrega.Text & "','PENDIENTE','" & Guna2TxtDescripcion.Text & "')"
 
             Dim conect As New SqlConnection(obtenerconexion)
             conect.Open()
@@ -159,20 +159,20 @@ Public Class FrmArticulos
         End Try
     End Sub
 
-    Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
+    Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click, Guna2BtnNuevo.Click
         activarcontroles()
         limpiarcontroles()
 
     End Sub
 
-    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
+    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click, Guna2BtnGuardar.Click
         insertar()
         Llenardatos()
         desactivarcontroles()
         limpiarcontroles()
     End Sub
 
-    Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
+    Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click, Guna2BtnCancelar.Click
         desactivarcontroles()
         limpiarcontroles()
 
@@ -201,35 +201,35 @@ Public Class FrmArticulos
         On Error Resume Next
 
         TxtId.Text = CStr(DgbArticulos.Item("IdArticulo", DgbArticulos.CurrentCell.RowIndex).Value)
-        txtNombreA.Text = CStr(DgbArticulos.Item("NombreA", DgbArticulos.CurrentCell.RowIndex).Value)
-        TxtCodigo.Text = CStr(DgbArticulos.Item("CodigoA", DgbArticulos.CurrentCell.RowIndex).Value)
-        TxtNserie.Text = CStr(DgbArticulos.Item("NumeroSerie", DgbArticulos.CurrentCell.RowIndex).Value)
-        TxtPrecio.Text = CStr(DgbArticulos.Item("PrecioCompra", DgbArticulos.CurrentCell.RowIndex).Value)
-        TxtDescripcion.Text = CStr(DgbArticulos.Item("Descripcion", DgbArticulos.CurrentCell.RowIndex).Value)
-        DTPFechacompra.Text = CStr(DgbArticulos.Item("FechaCompra", DgbArticulos.CurrentCell.RowIndex).Value)
+        Guna2TxtNombreA.Text = CStr(DgbArticulos.Item("NombreA", DgbArticulos.CurrentCell.RowIndex).Value)
+        Guna2TxtCodigo.Text = CStr(DgbArticulos.Item("CodigoA", DgbArticulos.CurrentCell.RowIndex).Value)
+        Guna2TxtNSerie.Text = CStr(DgbArticulos.Item("NumeroSerie", DgbArticulos.CurrentCell.RowIndex).Value)
+        Guna2TxtPrecio.Text = CStr(DgbArticulos.Item("PrecioCompra", DgbArticulos.CurrentCell.RowIndex).Value)
+        Guna2TxtDescripcion.Text = CStr(DgbArticulos.Item("Descripcion", DgbArticulos.CurrentCell.RowIndex).Value)
+        Guna2DTPFechaEntrega.Text = CStr(DgbArticulos.Item("FechaCompra", DgbArticulos.CurrentCell.RowIndex).Value)
         BtnCancelar.Enabled = True
-        BtnEditar.Enabled = True
-        BtnBorrar.Enabled = True
+        Guna2BntEditar.Enabled = True
+        Guna2BtnBorrar.Enabled = True
 
-        txtNombreA.Enabled = True
-        TxtNserie.Enabled = True
-        TxtCodigo.Enabled = True
-        TxtPrecio.Enabled = True
-        TxtDescripcion.Enabled = True
-        DTPFechacompra.Enabled = True
-        txtNombreA.Focus()
+        Guna2TxtNombreA.Enabled = True
+        Guna2TxtNSerie.Enabled = True
+        Guna2TxtCodigo.Enabled = True
+        Guna2TxtPrecio.Enabled = True
+        Guna2TxtDescripcion.Enabled = True
+        Guna2DTPFechaEntrega.Enabled = True
+        Guna2TxtNombreA.Focus()
         BtnBuscar.Enabled = False
         BtnNuevo.Enabled = False
     End Sub
 
-    Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
+    Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click, Guna2BntEditar.Click
         Editar()
         desactivarcontroles()
         Llenardatos()
 
     End Sub
 
-    Private Sub BtnBorrar_Click(sender As Object, e As EventArgs) Handles BtnBorrar.Click
+    Private Sub BtnBorrar_Click(sender As Object, e As EventArgs) Handles BtnBorrar.Click, Guna2BtnBorrar.Click
         Eliminar()
         desactivarcontroles()
         Llenardatos()
@@ -240,9 +240,9 @@ Public Class FrmArticulos
             MsgBox("Existen datos vacios", vbInformation, "Sistema de inventario")
         Else
             Dim sql As String
-            sql = "UPDATE Articulo SET NombreA ='" & txtNombreA.Text & "',NumeroSerie= '" & TxtNserie.Text & "', 
-            CodigoA='" & TxtCodigo.Text & "',PrecioCompra ='" & TxtPrecio.Text & "',FechaCompra='" & DTPFechacompra.Text & "',
-            Descripcion= '" & TxtDescripcion.Text & "' WHERE IdArticulo= '" & TxtId.Text & "'"
+            sql = "UPDATE Articulo SET NombreA ='" & Guna2TxtNombreA.Text & "',NumeroSerie= '" & Guna2TxtNSerie.Text & "', 
+            CodigoA='" & Guna2TxtCodigo.Text & "',PrecioCompra ='" & Guna2TxtPrecio.Text & "',FechaCompra='" & Guna2DTPFechaEntrega.Text & "',
+            Descripcion= '" & Guna2TxtDescripcion.Text & "' WHERE IdArticulo= '" & TxtId.Text & "'"
             Dim conect As New SqlConnection(obtenerconexion)
             conect.Open()
             Using comando As New SqlCommand(sql, conect)
@@ -259,7 +259,7 @@ Public Class FrmArticulos
         If TxtId.Text = 0 Then
             MsgBox("Existen datos vacios", vbInformation, "Sistema de inventario")
         Else
-            If MsgBox("¿seguro de eliminar a" + Trim(txtNombreA.Text) + "De su registro?" + vbCr + "Esta accion ya no se puede revertir.", vbQuestion + vbYesNo, "Sistema de inventario") = vbNo Then
+            If MsgBox("¿seguro de eliminar a" + Trim(Guna2TxtNombreA.Text) + "De su registro?" + vbCr + "Esta accion ya no se puede revertir.", vbQuestion + vbYesNo, "Sistema de inventario") = vbNo Then
                 limpiarcontroles()
                 desactivarcontroles()
                 Exit Sub
@@ -281,6 +281,10 @@ Public Class FrmArticulos
     End Sub
 
     Private Sub TxtPrecio_TextChanged(sender As Object, e As EventArgs) Handles TxtPrecio.TextChanged
+
+    End Sub
+
+    Private Sub Guna2TxtCodigo_TextChanged(sender As Object, e As EventArgs) Handles Guna2TxtNombreA.TextChanged
 
     End Sub
 End Class

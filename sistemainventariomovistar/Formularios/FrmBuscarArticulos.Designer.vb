@@ -22,189 +22,236 @@ Partial Class FrmBuscarArticulos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBuscarArticulos))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.RbCodigoA = New System.Windows.Forms.RadioButton()
-        Me.Rbfecha = New System.Windows.Forms.RadioButton()
-        Me.rbNombreA = New System.Windows.Forms.RadioButton()
+        Me.Guna2DgbArticulos = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.Guna2TxtBuscar = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2RbnCodigoA = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Guna2RbFecha = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Guna2RbNombreA = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.LblTotal = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TxtBuscar = New System.Windows.Forms.TextBox()
-        Me.DgbArticulos = New System.Windows.Forms.DataGridView()
-        Me.IdArticulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreA = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NumeroSerie = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CodigoA = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PrecioCompra = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaCompra = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstadoArticulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
-        CType(Me.DgbArticulos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2DgbArticulos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.RbCodigoA)
-        Me.Panel1.Controls.Add(Me.Rbfecha)
-        Me.Panel1.Controls.Add(Me.rbNombreA)
-        Me.Panel1.Controls.Add(Me.LblTotal)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.TxtBuscar)
-        Me.Panel1.Controls.Add(Me.DgbArticulos)
-        Me.Panel1.Location = New System.Drawing.Point(12, 50)
+        Me.Panel1.Controls.Add(Me.Guna2DgbArticulos)
+        Me.Panel1.Controls.Add(Me.Guna2TxtBuscar)
+        Me.Panel1.Controls.Add(Me.Guna2RbnCodigoA)
+        Me.Panel1.Controls.Add(Me.Guna2RbFecha)
+        Me.Panel1.Controls.Add(Me.Guna2RbNombreA)
+        Me.Panel1.Location = New System.Drawing.Point(51, 66)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(851, 255)
+        Me.Panel1.Size = New System.Drawing.Size(773, 250)
         Me.Panel1.TabIndex = 85
         '
-        'RbCodigoA
+        'Guna2DgbArticulos
         '
-        Me.RbCodigoA.AutoSize = True
-        Me.RbCodigoA.Location = New System.Drawing.Point(384, 44)
-        Me.RbCodigoA.Name = "RbCodigoA"
-        Me.RbCodigoA.Size = New System.Drawing.Size(110, 17)
-        Me.RbCodigoA.TabIndex = 22
-        Me.RbCodigoA.Text = "Codigo de articulo"
-        Me.RbCodigoA.UseVisualStyleBackColor = True
+        Me.Guna2DgbArticulos.AllowUserToAddRows = False
+        Me.Guna2DgbArticulos.AllowUserToDeleteRows = False
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(203, Byte), Integer))
+        Me.Guna2DgbArticulos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        Me.Guna2DgbArticulos.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.Guna2DgbArticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Guna2DgbArticulos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        Me.Guna2DgbArticulos.ColumnHeadersHeight = 40
+        Me.Guna2DgbArticulos.Cursor = System.Windows.Forms.Cursors.Hand
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Guna2DgbArticulos.DefaultCellStyle = DataGridViewCellStyle9
+        Me.Guna2DgbArticulos.GridColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
+        Me.Guna2DgbArticulos.Location = New System.Drawing.Point(0, 47)
+        Me.Guna2DgbArticulos.Name = "Guna2DgbArticulos"
+        Me.Guna2DgbArticulos.ReadOnly = True
+        Me.Guna2DgbArticulos.RowHeadersVisible = False
+        Me.Guna2DgbArticulos.Size = New System.Drawing.Size(773, 200)
+        Me.Guna2DgbArticulos.TabIndex = 27
+        Me.Guna2DgbArticulos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Green
+        Me.Guna2DgbArticulos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(203, Byte), Integer))
+        Me.Guna2DgbArticulos.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.Guna2DgbArticulos.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.Guna2DgbArticulos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.Guna2DgbArticulos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.Guna2DgbArticulos.ThemeStyle.BackColor = System.Drawing.SystemColors.Control
+        Me.Guna2DgbArticulos.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
+        Me.Guna2DgbArticulos.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
+        Me.Guna2DgbArticulos.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.Guna2DgbArticulos.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2DgbArticulos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.Guna2DgbArticulos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.Guna2DgbArticulos.ThemeStyle.HeaderStyle.Height = 40
+        Me.Guna2DgbArticulos.ThemeStyle.ReadOnly = True
+        Me.Guna2DgbArticulos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
+        Me.Guna2DgbArticulos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.Guna2DgbArticulos.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2DgbArticulos.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black
+        Me.Guna2DgbArticulos.ThemeStyle.RowsStyle.Height = 22
+        Me.Guna2DgbArticulos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.White
+        Me.Guna2DgbArticulos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
         '
-        'Rbfecha
+        'Guna2TxtBuscar
         '
-        Me.Rbfecha.AutoSize = True
-        Me.Rbfecha.Location = New System.Drawing.Point(243, 42)
-        Me.Rbfecha.Name = "Rbfecha"
-        Me.Rbfecha.Size = New System.Drawing.Size(55, 17)
-        Me.Rbfecha.TabIndex = 21
-        Me.Rbfecha.Text = "Fecha"
-        Me.Rbfecha.UseVisualStyleBackColor = True
+        Me.Guna2TxtBuscar.BorderRadius = 7
+        Me.Guna2TxtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2TxtBuscar.DefaultText = ""
+        Me.Guna2TxtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Guna2TxtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Guna2TxtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TxtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TxtBuscar.FillColor = System.Drawing.SystemColors.Control
+        Me.Guna2TxtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TxtBuscar.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!)
+        Me.Guna2TxtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TxtBuscar.IconLeft = CType(resources.GetObject("Guna2TxtBuscar.IconLeft"), System.Drawing.Image)
+        Me.Guna2TxtBuscar.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.Guna2TxtBuscar.Location = New System.Drawing.Point(0, 4)
+        Me.Guna2TxtBuscar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Guna2TxtBuscar.Name = "Guna2TxtBuscar"
+        Me.Guna2TxtBuscar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Guna2TxtBuscar.PlaceholderForeColor = System.Drawing.Color.Gray
+        Me.Guna2TxtBuscar.PlaceholderText = "Buscar..."
+        Me.Guna2TxtBuscar.SelectedText = ""
+        Me.Guna2TxtBuscar.Size = New System.Drawing.Size(381, 36)
+        Me.Guna2TxtBuscar.TabIndex = 26
         '
-        'rbNombreA
+        'Guna2RbnCodigoA
         '
-        Me.rbNombreA.AutoSize = True
-        Me.rbNombreA.Checked = True
-        Me.rbNombreA.Location = New System.Drawing.Point(17, 42)
-        Me.rbNombreA.Name = "rbNombreA"
-        Me.rbNombreA.Size = New System.Drawing.Size(115, 17)
-        Me.rbNombreA.TabIndex = 20
-        Me.rbNombreA.TabStop = True
-        Me.rbNombreA.Text = "Nombre de Articulo"
-        Me.rbNombreA.UseVisualStyleBackColor = True
+        Me.Guna2RbnCodigoA.AutoSize = True
+        Me.Guna2RbnCodigoA.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbnCodigoA.CheckedState.BorderThickness = 0
+        Me.Guna2RbnCodigoA.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbnCodigoA.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Guna2RbnCodigoA.CheckedState.InnerOffset = -4
+        Me.Guna2RbnCodigoA.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2RbnCodigoA.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!)
+        Me.Guna2RbnCodigoA.Location = New System.Drawing.Point(642, 10)
+        Me.Guna2RbnCodigoA.Name = "Guna2RbnCodigoA"
+        Me.Guna2RbnCodigoA.Size = New System.Drawing.Size(116, 20)
+        Me.Guna2RbnCodigoA.TabIndex = 25
+        Me.Guna2RbnCodigoA.Text = "Código de Artículo"
+        Me.Guna2RbnCodigoA.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2RbnCodigoA.UncheckedState.BorderThickness = 2
+        Me.Guna2RbnCodigoA.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2RbnCodigoA.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
+        'Guna2RbFecha
+        '
+        Me.Guna2RbFecha.AutoSize = True
+        Me.Guna2RbFecha.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbFecha.CheckedState.BorderThickness = 0
+        Me.Guna2RbFecha.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbFecha.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Guna2RbFecha.CheckedState.InnerOffset = -4
+        Me.Guna2RbFecha.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2RbFecha.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!)
+        Me.Guna2RbFecha.Location = New System.Drawing.Point(555, 10)
+        Me.Guna2RbFecha.Name = "Guna2RbFecha"
+        Me.Guna2RbFecha.Size = New System.Drawing.Size(55, 20)
+        Me.Guna2RbFecha.TabIndex = 24
+        Me.Guna2RbFecha.Text = "Fecha"
+        Me.Guna2RbFecha.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2RbFecha.UncheckedState.BorderThickness = 2
+        Me.Guna2RbFecha.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2RbFecha.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
+        'Guna2RbNombreA
+        '
+        Me.Guna2RbNombreA.AutoSize = True
+        Me.Guna2RbNombreA.Checked = True
+        Me.Guna2RbNombreA.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbNombreA.CheckedState.BorderThickness = 0
+        Me.Guna2RbNombreA.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbNombreA.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Guna2RbNombreA.CheckedState.InnerOffset = -4
+        Me.Guna2RbNombreA.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2RbNombreA.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!)
+        Me.Guna2RbNombreA.Location = New System.Drawing.Point(410, 10)
+        Me.Guna2RbNombreA.Name = "Guna2RbNombreA"
+        Me.Guna2RbNombreA.Size = New System.Drawing.Size(122, 20)
+        Me.Guna2RbNombreA.TabIndex = 23
+        Me.Guna2RbNombreA.TabStop = True
+        Me.Guna2RbNombreA.Text = "Nombre de Artículo"
+        Me.Guna2RbNombreA.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2RbNombreA.UncheckedState.BorderThickness = 2
+        Me.Guna2RbNombreA.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2RbNombreA.UncheckedState.InnerColor = System.Drawing.Color.Transparent
         '
         'LblTotal
         '
         Me.LblTotal.AutoSize = True
-        Me.LblTotal.Location = New System.Drawing.Point(127, 265)
+        Me.LblTotal.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTotal.Location = New System.Drawing.Point(193, 320)
         Me.LblTotal.Name = "LblTotal"
-        Me.LblTotal.Size = New System.Drawing.Size(31, 13)
+        Me.LblTotal.Size = New System.Drawing.Size(35, 17)
         Me.LblTotal.TabIndex = 19
         Me.LblTotal.Text = "Total"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 265)
+        Me.Label2.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(54, 320)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(118, 13)
+        Me.Label2.Size = New System.Drawing.Size(138, 17)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "Empleados Registrados"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(14, 12)
+        Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(378, 23)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 13)
+        Me.Label1.Size = New System.Drawing.Size(115, 24)
         Me.Label1.TabIndex = 17
-        Me.Label1.Text = "Buscar"
+        Me.Label1.Text = "Buscar Artículo"
         '
-        'TxtBuscar
+        'Guna2Elipse1
         '
-        Me.TxtBuscar.Location = New System.Drawing.Point(568, 41)
-        Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(516, 20)
-        Me.TxtBuscar.TabIndex = 1
+        Me.Guna2Elipse1.BorderRadius = 20
+        Me.Guna2Elipse1.TargetControl = Me
         '
-        'DgbArticulos
+        'Panel2
         '
-        Me.DgbArticulos.AllowUserToAddRows = False
-        Me.DgbArticulos.AllowUserToDeleteRows = False
-        Me.DgbArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgbArticulos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdArticulo, Me.NombreA, Me.NumeroSerie, Me.CodigoA, Me.PrecioCompra, Me.FechaCompra, Me.EstadoArticulo, Me.Descripcion})
-        Me.DgbArticulos.Location = New System.Drawing.Point(1, 75)
-        Me.DgbArticulos.Name = "DgbArticulos"
-        Me.DgbArticulos.ReadOnly = True
-        Me.DgbArticulos.RowHeadersVisible = False
-        Me.DgbArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgbArticulos.Size = New System.Drawing.Size(1083, 187)
-        Me.DgbArticulos.TabIndex = 0
-        '
-        'IdArticulo
-        '
-        Me.IdArticulo.DataPropertyName = "IdArticulo"
-        Me.IdArticulo.HeaderText = "ID"
-        Me.IdArticulo.Name = "IdArticulo"
-        Me.IdArticulo.ReadOnly = True
-        Me.IdArticulo.Visible = False
-        '
-        'NombreA
-        '
-        Me.NombreA.DataPropertyName = "NombreA"
-        Me.NombreA.HeaderText = "NOMBRE ARTICULO"
-        Me.NombreA.Name = "NombreA"
-        Me.NombreA.ReadOnly = True
-        Me.NombreA.Width = 180
-        '
-        'NumeroSerie
-        '
-        Me.NumeroSerie.DataPropertyName = "NumeroSerie"
-        Me.NumeroSerie.HeaderText = "NUMERO DE SERIE"
-        Me.NumeroSerie.Name = "NumeroSerie"
-        Me.NumeroSerie.ReadOnly = True
-        Me.NumeroSerie.Width = 150
-        '
-        'CodigoA
-        '
-        Me.CodigoA.DataPropertyName = "CodigoA"
-        Me.CodigoA.HeaderText = "CODIGO"
-        Me.CodigoA.Name = "CodigoA"
-        Me.CodigoA.ReadOnly = True
-        '
-        'PrecioCompra
-        '
-        Me.PrecioCompra.DataPropertyName = "PrecioCompra"
-        Me.PrecioCompra.HeaderText = "PRECIO DE COMPRA"
-        Me.PrecioCompra.Name = "PrecioCompra"
-        Me.PrecioCompra.ReadOnly = True
-        Me.PrecioCompra.Width = 150
-        '
-        'FechaCompra
-        '
-        Me.FechaCompra.DataPropertyName = "FechaCompra"
-        Me.FechaCompra.HeaderText = "FECHA DE COMPRA"
-        Me.FechaCompra.Name = "FechaCompra"
-        Me.FechaCompra.ReadOnly = True
-        '
-        'EstadoArticulo
-        '
-        Me.EstadoArticulo.DataPropertyName = "EstadoArticulo"
-        Me.EstadoArticulo.HeaderText = "ESTADO "
-        Me.EstadoArticulo.Name = "EstadoArticulo"
-        Me.EstadoArticulo.ReadOnly = True
-        '
-        'Descripcion
-        '
-        Me.Descripcion.DataPropertyName = "Descripcion"
-        Me.Descripcion.HeaderText = "DESCRIPCION"
-        Me.Descripcion.Name = "Descripcion"
-        Me.Descripcion.ReadOnly = True
-        Me.Descripcion.Width = 150
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(875, 20)
+        Me.Panel2.TabIndex = 86
         '
         'FrmBuscarArticulos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(875, 363)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(875, 347)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.LblTotal)
+        Me.Controls.Add(Me.Label2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmBuscarArticulos"
@@ -212,26 +259,21 @@ Partial Class FrmBuscarArticulos
         Me.Text = "FrmBuscarArticulos"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DgbArticulos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2DgbArticulos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents RbCodigoA As RadioButton
-    Friend WithEvents Rbfecha As RadioButton
-    Friend WithEvents rbNombreA As RadioButton
     Friend WithEvents LblTotal As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TxtBuscar As TextBox
-    Friend WithEvents DgbArticulos As DataGridView
-    Friend WithEvents IdArticulo As DataGridViewTextBoxColumn
-    Friend WithEvents NombreA As DataGridViewTextBoxColumn
-    Friend WithEvents NumeroSerie As DataGridViewTextBoxColumn
-    Friend WithEvents CodigoA As DataGridViewTextBoxColumn
-    Friend WithEvents PrecioCompra As DataGridViewTextBoxColumn
-    Friend WithEvents FechaCompra As DataGridViewTextBoxColumn
-    Friend WithEvents EstadoArticulo As DataGridViewTextBoxColumn
-    Friend WithEvents Descripcion As DataGridViewTextBoxColumn
+    Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Guna2RbNombreA As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Guna2RbFecha As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Guna2TxtBuscar As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2RbnCodigoA As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Guna2DgbArticulos As Guna.UI2.WinForms.Guna2DataGridView
 End Class

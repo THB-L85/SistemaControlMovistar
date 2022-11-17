@@ -7,59 +7,59 @@ Public Class FrmBusquedaEmpleado
 
     End Sub
     Sub buscardatos()
-        If rbNombreEmpleado.Checked Then
-            If TxtBuscar.Text = " " Then
+        If Guna2RbNombreEmpleado.Checked Then
+            If Guna2TxtBuscar.Text = " " Then
                 Llenardatos()
 
             End If
             adaptador = New SqlDataAdapter("SELECT Empleados.IdEmpleado, Empleados.Nombre, Empleados.Curp, Empleados.Genero,Empleados.Telefono,Empleados.Correo ,
               Empleados.Direccion, Departamentos.NombreD, Puestos.NombreP FROM Departamentos INNER JOIN Empleados 
               ON Departamentos.IdDepartamento = Empleados.IdDepartamento 
-              INNER JOIN Puestos ON Empleados.IdPuesto = Puestos.IdPuesto WHERE Empleados.Nombre LIKE '%" & TxtBuscar.Text & "%' ", obtenerconexion)
+              INNER JOIN Puestos ON Empleados.IdPuesto = Puestos.IdPuesto WHERE Empleados.Nombre LIKE '%" & Guna2TxtBuscar.Text & "%' ", obtenerconexion)
             tabla.Clear()
             adaptador.Fill(tabla)
             If tabla.Rows.Count > 0 Then
-                DgbEmpleados.DataSource = tabla
+                Guna2DgbEmpleados.DataSource = tabla
                 LblTotal.Text = tabla.Rows.Count
             Else
-                DgbEmpleados.DataSource = ""
+                Guna2DgbEmpleados.DataSource = ""
             End If
 
         End If
-        If RbCurp.Checked Then
-            If TxtBuscar.Text = " " Then
+        If Guna2RbCurp.Checked Then
+            If Guna2TxtBuscar.Text = " " Then
                 Llenardatos()
 
             End If
             adaptador = New SqlDataAdapter("SELECT Empleados.IdEmpleado, Empleados.Nombre, Empleados.Curp, Empleados.Genero,Empleados.Telefono,Empleados.Correo ,
               Empleados.Direccion, Departamentos.NombreD, Puestos.NombreP FROM Departamentos INNER JOIN Empleados 
               ON Departamentos.IdDepartamento = Empleados.IdDepartamento 
-              INNER JOIN Puestos ON Empleados.IdPuesto = Puestos.IdPuesto WHERE Empleados.Curp LIKE '%" & TxtBuscar.Text & "%' ", obtenerconexion)
+              INNER JOIN Puestos ON Empleados.IdPuesto = Puestos.IdPuesto WHERE Empleados.Curp LIKE '%" & Guna2TxtBuscar.Text & "%' ", obtenerconexion)
             tabla.Clear()
             adaptador.Fill(tabla)
             If tabla.Rows.Count > 0 Then
-                DgbEmpleados.DataSource = tabla
+                Guna2DgbEmpleados.DataSource = tabla
                 LblTotal.Text = tabla.Rows.Count
             Else
-                DgbEmpleados.DataSource = ""
+                Guna2DgbEmpleados.DataSource = ""
             End If
         End If
-        If RbDepartamento.Checked Then
-            If TxtBuscar.Text = " " Then
+        If Guna2RbDepartamento.Checked Then
+            If Guna2TxtBuscar.Text = " " Then
                 Llenardatos()
 
             End If
             adaptador = New SqlDataAdapter("SELECT Empleados.IdEmpleado, Empleados.Nombre, Empleados.Curp, Empleados.Genero,Empleados.Telefono,Empleados.Correo ,
               Empleados.Direccion, Departamentos.NombreD, Puestos.NombreP FROM Departamentos INNER JOIN Empleados 
               ON Departamentos.IdDepartamento = Empleados.IdDepartamento 
-              INNER JOIN Puestos ON Empleados.IdPuesto = Puestos.IdPuesto WHERE Departamentos.NombreD LIKE '%" & TxtBuscar.Text & "%' ", obtenerconexion)
+              INNER JOIN Puestos ON Empleados.IdPuesto = Puestos.IdPuesto WHERE Departamentos.NombreD LIKE '%" & Guna2TxtBuscar.Text & "%' ", obtenerconexion)
             tabla.Clear()
             adaptador.Fill(tabla)
             If tabla.Rows.Count > 0 Then
-                DgbEmpleados.DataSource = tabla
+                Guna2DgbEmpleados.DataSource = tabla
                 LblTotal.Text = tabla.Rows.Count
             Else
-                DgbEmpleados.DataSource = ""
+                Guna2DgbEmpleados.DataSource = ""
             End If
         End If
 
@@ -75,7 +75,7 @@ Public Class FrmBusquedaEmpleado
             Dim tabla As New DataTable
             adaptador = New SqlDataAdapter(sql, obtenerconexion)
             adaptador.Fill(tabla)
-            DgbEmpleados.DataSource = tabla
+            Guna2DgbEmpleados.DataSource = tabla
             LblTotal.Text = tabla.Rows.Count
 
         Catch ex As Exception
@@ -88,12 +88,12 @@ Public Class FrmBusquedaEmpleado
     End Sub
     Dim FrmEmpleados As New FrmEmpleados
 
-    Private Sub DgbEmpleados_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgbEmpleados.CellDoubleClick
+    Private Sub DgbEmpleados_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles Guna2DgbEmpleados.CellDoubleClick
         On Error Resume Next 'cuando se produce un error en tiempo de ejecucion esta instruccion se transfiere y no se interrumpe la ejecucion
-        FrmEmpleados.TxtId.Text = CStr(DgbEmpleados.Item("IdEmpleado", DgbEmpleados.CurrentCell.RowIndex).Value)
-        FrmEmpleados.txtNombrecompleto.Text = CStr(DgbEmpleados.Item("Nombre", DgbEmpleados.CurrentCell.RowIndex).Value)
-        FrmEmpleados.TxtCurp.Text = CStr(DgbEmpleados.Item("Curp", DgbEmpleados.CurrentCell.RowIndex).Value)
-        FrmEmpleados.cboDepartamento.Text = CStr(DgbEmpleados.Item("NombreD", DgbEmpleados.CurrentCell.RowIndex).Value)
+        FrmEmpleados.TxtId.Text = CStr(Guna2DgbEmpleados.Item("IdEmpleado", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
+        FrmEmpleados.txtNombrecompleto.Text = CStr(Guna2DgbEmpleados.Item("Nombre", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
+        FrmEmpleados.TxtCurp.Text = CStr(Guna2DgbEmpleados.Item("Curp", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
+        FrmEmpleados.cboDepartamento.Text = CStr(Guna2DgbEmpleados.Item("NombreD", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
         Me.Close()
 
     End Sub
