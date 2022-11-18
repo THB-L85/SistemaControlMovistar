@@ -22,227 +22,389 @@ Partial Class frmPuestosTrabajo
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPuestosTrabajo))
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LblTotal = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TxtBuscar = New System.Windows.Forms.TextBox()
-        Me.DgbPuestos = New System.Windows.Forms.DataGridView()
-        Me.IdPuesto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreP = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescripcionP = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BtnBuscar = New System.Windows.Forms.Button()
-        Me.BtnCancelar = New System.Windows.Forms.Button()
-        Me.BtnBorrar = New System.Windows.Forms.Button()
-        Me.BtnEditar = New System.Windows.Forms.Button()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
-        Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.TxtId = New System.Windows.Forms.TextBox()
-        Me.TxtDescripcionP = New System.Windows.Forms.TextBox()
-        Me.TxtNombreP = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2btnExit = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2tbNameP = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2TxtDescripcionP = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2btnNuevo = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2btnCancelar = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2btnGuardar = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2btnEditar = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2btnBorrar = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2txtBuscar = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2DgbPuestos = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Panel1.SuspendLayout()
-        CType(Me.DgbPuestos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2DgbPuestos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Guna2DgbPuestos)
+        Me.Panel1.Controls.Add(Me.Guna2txtBuscar)
         Me.Panel1.Controls.Add(Me.LblTotal)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.TxtBuscar)
-        Me.Panel1.Controls.Add(Me.DgbPuestos)
-        Me.Panel1.Location = New System.Drawing.Point(3, 214)
+        Me.Panel1.Location = New System.Drawing.Point(48, 287)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(473, 235)
+        Me.Panel1.Size = New System.Drawing.Size(616, 269)
         Me.Panel1.TabIndex = 34
         '
         'LblTotal
         '
         Me.LblTotal.AutoSize = True
-        Me.LblTotal.Location = New System.Drawing.Point(128, 197)
+        Me.LblTotal.Font = New System.Drawing.Font("Franklin Gothic Medium", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTotal.Location = New System.Drawing.Point(545, 27)
         Me.LblTotal.Name = "LblTotal"
-        Me.LblTotal.Size = New System.Drawing.Size(31, 13)
+        Me.LblTotal.Size = New System.Drawing.Size(41, 20)
         Me.LblTotal.TabIndex = 19
         Me.LblTotal.Text = "Total"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(14, 197)
+        Me.Label3.Font = New System.Drawing.Font("Franklin Gothic Medium", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(399, 27)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(107, 13)
+        Me.Label3.Size = New System.Drawing.Size(147, 20)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Usuarios Registrados"
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(14, 31)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(40, 13)
-        Me.Label4.TabIndex = 17
-        Me.Label4.Text = "Buscar"
-        '
-        'TxtBuscar
-        '
-        Me.TxtBuscar.Location = New System.Drawing.Point(60, 28)
-        Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(397, 20)
-        Me.TxtBuscar.TabIndex = 1
-        '
-        'DgbPuestos
-        '
-        Me.DgbPuestos.AllowUserToAddRows = False
-        Me.DgbPuestos.AllowUserToDeleteRows = False
-        Me.DgbPuestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgbPuestos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdPuesto, Me.NombreP, Me.DescripcionP})
-        Me.DgbPuestos.Location = New System.Drawing.Point(17, 54)
-        Me.DgbPuestos.Name = "DgbPuestos"
-        Me.DgbPuestos.ReadOnly = True
-        Me.DgbPuestos.RowHeadersVisible = False
-        Me.DgbPuestos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgbPuestos.Size = New System.Drawing.Size(440, 121)
-        Me.DgbPuestos.TabIndex = 0
-        '
-        'IdPuesto
-        '
-        Me.IdPuesto.DataPropertyName = "IdPuesto"
-        Me.IdPuesto.HeaderText = "ID"
-        Me.IdPuesto.Name = "IdPuesto"
-        Me.IdPuesto.ReadOnly = True
-        Me.IdPuesto.Visible = False
-        Me.IdPuesto.Width = 50
-        '
-        'NombreP
-        '
-        Me.NombreP.DataPropertyName = "NombreP"
-        Me.NombreP.HeaderText = "PUESTO DE TRABAJO"
-        Me.NombreP.Name = "NombreP"
-        Me.NombreP.ReadOnly = True
-        Me.NombreP.Width = 200
-        '
-        'DescripcionP
-        '
-        Me.DescripcionP.DataPropertyName = "DescripcionP"
-        Me.DescripcionP.HeaderText = "DESCRIPCION"
-        Me.DescripcionP.Name = "DescripcionP"
-        Me.DescripcionP.ReadOnly = True
-        Me.DescripcionP.Width = 250
-        '
         'BtnBuscar
         '
-        Me.BtnBuscar.Location = New System.Drawing.Point(308, 176)
+        Me.BtnBuscar.Location = New System.Drawing.Point(371, 204)
         Me.BtnBuscar.Name = "BtnBuscar"
         Me.BtnBuscar.Size = New System.Drawing.Size(75, 23)
         Me.BtnBuscar.TabIndex = 33
         Me.BtnBuscar.Text = "Buscar"
         Me.BtnBuscar.UseVisualStyleBackColor = True
-        '
-        'BtnCancelar
-        '
-        Me.BtnCancelar.Location = New System.Drawing.Point(401, 176)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnCancelar.TabIndex = 32
-        Me.BtnCancelar.Text = "Cancelar"
-        Me.BtnCancelar.UseVisualStyleBackColor = True
-        '
-        'BtnBorrar
-        '
-        Me.BtnBorrar.Location = New System.Drawing.Point(401, 108)
-        Me.BtnBorrar.Name = "BtnBorrar"
-        Me.BtnBorrar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnBorrar.TabIndex = 31
-        Me.BtnBorrar.Text = "Eliminar"
-        Me.BtnBorrar.UseVisualStyleBackColor = True
-        '
-        'BtnEditar
-        '
-        Me.BtnEditar.Location = New System.Drawing.Point(308, 108)
-        Me.BtnEditar.Name = "BtnEditar"
-        Me.BtnEditar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnEditar.TabIndex = 30
-        Me.BtnEditar.Text = "Editar"
-        Me.BtnEditar.UseVisualStyleBackColor = True
-        '
-        'BtnGuardar
-        '
-        Me.BtnGuardar.Location = New System.Drawing.Point(401, 44)
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnGuardar.TabIndex = 29
-        Me.BtnGuardar.Text = "Guardar"
-        Me.BtnGuardar.UseVisualStyleBackColor = True
-        '
-        'BtnNuevo
-        '
-        Me.BtnNuevo.Location = New System.Drawing.Point(308, 44)
-        Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(75, 23)
-        Me.BtnNuevo.TabIndex = 28
-        Me.BtnNuevo.Text = "Nuevo"
-        Me.BtnNuevo.UseVisualStyleBackColor = True
+        Me.BtnBuscar.Visible = False
         '
         'TxtId
         '
-        Me.TxtId.Location = New System.Drawing.Point(3, 12)
+        Me.TxtId.Location = New System.Drawing.Point(374, 166)
         Me.TxtId.Name = "TxtId"
-        Me.TxtId.Size = New System.Drawing.Size(100, 20)
+        Me.TxtId.Size = New System.Drawing.Size(71, 20)
         Me.TxtId.TabIndex = 27
         Me.TxtId.Visible = False
         '
-        'TxtDescripcionP
+        'Guna2Elipse1
         '
-        Me.TxtDescripcionP.Location = New System.Drawing.Point(101, 106)
-        Me.TxtDescripcionP.Multiline = True
-        Me.TxtDescripcionP.Name = "TxtDescripcionP"
-        Me.TxtDescripcionP.Size = New System.Drawing.Size(175, 91)
-        Me.TxtDescripcionP.TabIndex = 26
+        Me.Guna2Elipse1.BorderRadius = 20
+        Me.Guna2Elipse1.TargetControl = Me
         '
-        'TxtNombreP
+        'Label5
         '
-        Me.TxtNombreP.Location = New System.Drawing.Point(101, 44)
-        Me.TxtNombreP.Name = "TxtNombreP"
-        Me.TxtNombreP.Size = New System.Drawing.Size(175, 20)
-        Me.TxtNombreP.TabIndex = 25
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(277, 23)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(138, 24)
+        Me.Label5.TabIndex = 36
+        Me.Label5.Text = "Registro de Puesto"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'Label2
+        'Guna2Panel1
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(16, 116)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 13)
-        Me.Label2.TabIndex = 24
-        Me.Label2.Text = "Descripcion"
+        Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.Size = New System.Drawing.Size(712, 20)
+        Me.Guna2Panel1.TabIndex = 35
         '
-        'Label1
+        'Guna2btnExit
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 44)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 13)
-        Me.Label1.TabIndex = 23
-        Me.Label1.Text = "Puesto"
+        Me.Guna2btnExit.Animated = True
+        Me.Guna2btnExit.BackgroundImage = CType(resources.GetObject("Guna2btnExit.BackgroundImage"), System.Drawing.Image)
+        Me.Guna2btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Guna2btnExit.BorderRadius = 7
+        Me.Guna2btnExit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2btnExit.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2btnExit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2btnExit.ForeColor = System.Drawing.Color.White
+        Me.Guna2btnExit.Location = New System.Drawing.Point(23, 22)
+        Me.Guna2btnExit.Name = "Guna2btnExit"
+        Me.Guna2btnExit.Size = New System.Drawing.Size(45, 45)
+        Me.Guna2btnExit.TabIndex = 37
+        '
+        'Guna2tbNameP
+        '
+        Me.Guna2tbNameP.Animated = True
+        Me.Guna2tbNameP.BorderColor = System.Drawing.Color.Black
+        Me.Guna2tbNameP.BorderRadius = 7
+        Me.Guna2tbNameP.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2tbNameP.DefaultText = ""
+        Me.Guna2tbNameP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Guna2tbNameP.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Guna2tbNameP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2tbNameP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2tbNameP.FillColor = System.Drawing.SystemColors.Control
+        Me.Guna2tbNameP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2tbNameP.Font = New System.Drawing.Font("Franklin Gothic Book", 11.25!)
+        Me.Guna2tbNameP.ForeColor = System.Drawing.Color.Black
+        Me.Guna2tbNameP.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2tbNameP.Location = New System.Drawing.Point(65, 86)
+        Me.Guna2tbNameP.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Guna2tbNameP.Name = "Guna2tbNameP"
+        Me.Guna2tbNameP.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Guna2tbNameP.PlaceholderForeColor = System.Drawing.Color.Gray
+        Me.Guna2tbNameP.PlaceholderText = "Puesto"
+        Me.Guna2tbNameP.SelectedText = ""
+        Me.Guna2tbNameP.Size = New System.Drawing.Size(300, 36)
+        Me.Guna2tbNameP.TabIndex = 38
+        '
+        'Guna2TxtDescripcionP
+        '
+        Me.Guna2TxtDescripcionP.Animated = True
+        Me.Guna2TxtDescripcionP.BorderColor = System.Drawing.Color.Black
+        Me.Guna2TxtDescripcionP.BorderRadius = 7
+        Me.Guna2TxtDescripcionP.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2TxtDescripcionP.DefaultText = ""
+        Me.Guna2TxtDescripcionP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Guna2TxtDescripcionP.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Guna2TxtDescripcionP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TxtDescripcionP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TxtDescripcionP.FillColor = System.Drawing.SystemColors.Control
+        Me.Guna2TxtDescripcionP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TxtDescripcionP.Font = New System.Drawing.Font("Franklin Gothic Book", 11.25!)
+        Me.Guna2TxtDescripcionP.ForeColor = System.Drawing.Color.Black
+        Me.Guna2TxtDescripcionP.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TxtDescripcionP.Location = New System.Drawing.Point(65, 130)
+        Me.Guna2TxtDescripcionP.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Guna2TxtDescripcionP.Multiline = True
+        Me.Guna2TxtDescripcionP.Name = "Guna2TxtDescripcionP"
+        Me.Guna2TxtDescripcionP.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Guna2TxtDescripcionP.PlaceholderForeColor = System.Drawing.Color.Gray
+        Me.Guna2TxtDescripcionP.PlaceholderText = "Descripción"
+        Me.Guna2TxtDescripcionP.SelectedText = ""
+        Me.Guna2TxtDescripcionP.Size = New System.Drawing.Size(300, 138)
+        Me.Guna2TxtDescripcionP.TabIndex = 39
+        '
+        'Guna2btnNuevo
+        '
+        Me.Guna2btnNuevo.Animated = True
+        Me.Guna2btnNuevo.AutoRoundedCorners = True
+        Me.Guna2btnNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2btnNuevo.BackgroundImage = CType(resources.GetObject("Guna2btnNuevo.BackgroundImage"), System.Drawing.Image)
+        Me.Guna2btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Guna2btnNuevo.BorderRadius = 31
+        Me.Guna2btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2btnNuevo.DisabledState.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2btnNuevo.DisabledState.CustomBorderColor = System.Drawing.Color.Transparent
+        Me.Guna2btnNuevo.DisabledState.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2btnNuevo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2btnNuevo.DisabledState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
+        Me.Guna2btnNuevo.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2btnNuevo.Font = New System.Drawing.Font("Franklin Gothic Demi", 11.25!)
+        Me.Guna2btnNuevo.ForeColor = System.Drawing.Color.Transparent
+        Me.Guna2btnNuevo.ImageSize = New System.Drawing.Size(64, 64)
+        Me.Guna2btnNuevo.Location = New System.Drawing.Point(456, 79)
+        Me.Guna2btnNuevo.Name = "Guna2btnNuevo"
+        Me.Guna2btnNuevo.Size = New System.Drawing.Size(64, 64)
+        Me.Guna2btnNuevo.TabIndex = 42
+        '
+        'Guna2btnCancelar
+        '
+        Me.Guna2btnCancelar.Animated = True
+        Me.Guna2btnCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2btnCancelar.BackgroundImage = CType(resources.GetObject("Guna2btnCancelar.BackgroundImage"), System.Drawing.Image)
+        Me.Guna2btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Guna2btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2btnCancelar.DisabledState.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2btnCancelar.DisabledState.CustomBorderColor = System.Drawing.Color.Transparent
+        Me.Guna2btnCancelar.DisabledState.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2btnCancelar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2btnCancelar.DisabledState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+        Me.Guna2btnCancelar.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2btnCancelar.Font = New System.Drawing.Font("Franklin Gothic Demi", 11.25!)
+        Me.Guna2btnCancelar.ForeColor = System.Drawing.Color.Transparent
+        Me.Guna2btnCancelar.ImageSize = New System.Drawing.Size(54, 54)
+        Me.Guna2btnCancelar.Location = New System.Drawing.Point(557, 86)
+        Me.Guna2btnCancelar.Name = "Guna2btnCancelar"
+        Me.Guna2btnCancelar.Size = New System.Drawing.Size(54, 54)
+        Me.Guna2btnCancelar.TabIndex = 43
+        '
+        'Guna2btnGuardar
+        '
+        Me.Guna2btnGuardar.Animated = True
+        Me.Guna2btnGuardar.BorderRadius = 7
+        Me.Guna2btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2btnGuardar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2btnGuardar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2btnGuardar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2btnGuardar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2btnGuardar.FillColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
+        Me.Guna2btnGuardar.Font = New System.Drawing.Font("Franklin Gothic Demi", 11.25!)
+        Me.Guna2btnGuardar.ForeColor = System.Drawing.Color.White
+        Me.Guna2btnGuardar.Location = New System.Drawing.Point(451, 151)
+        Me.Guna2btnGuardar.Name = "Guna2btnGuardar"
+        Me.Guna2btnGuardar.Size = New System.Drawing.Size(170, 35)
+        Me.Guna2btnGuardar.TabIndex = 44
+        Me.Guna2btnGuardar.Text = "Guardar"
+        '
+        'Guna2btnEditar
+        '
+        Me.Guna2btnEditar.Animated = True
+        Me.Guna2btnEditar.BorderRadius = 7
+        Me.Guna2btnEditar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2btnEditar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2btnEditar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2btnEditar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2btnEditar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2btnEditar.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.Guna2btnEditar.Font = New System.Drawing.Font("Franklin Gothic Demi", 11.25!)
+        Me.Guna2btnEditar.ForeColor = System.Drawing.Color.White
+        Me.Guna2btnEditar.Location = New System.Drawing.Point(451, 192)
+        Me.Guna2btnEditar.Name = "Guna2btnEditar"
+        Me.Guna2btnEditar.Size = New System.Drawing.Size(170, 35)
+        Me.Guna2btnEditar.TabIndex = 45
+        Me.Guna2btnEditar.Text = "Editar"
+        '
+        'Guna2btnBorrar
+        '
+        Me.Guna2btnBorrar.Animated = True
+        Me.Guna2btnBorrar.BorderRadius = 7
+        Me.Guna2btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2btnBorrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2btnBorrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2btnBorrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2btnBorrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2btnBorrar.FillColor = System.Drawing.Color.Brown
+        Me.Guna2btnBorrar.Font = New System.Drawing.Font("Franklin Gothic Demi", 11.25!)
+        Me.Guna2btnBorrar.ForeColor = System.Drawing.Color.White
+        Me.Guna2btnBorrar.Location = New System.Drawing.Point(451, 233)
+        Me.Guna2btnBorrar.Name = "Guna2btnBorrar"
+        Me.Guna2btnBorrar.Size = New System.Drawing.Size(170, 35)
+        Me.Guna2btnBorrar.TabIndex = 46
+        Me.Guna2btnBorrar.Text = "Eliminar"
+        '
+        'Guna2txtBuscar
+        '
+        Me.Guna2txtBuscar.Animated = True
+        Me.Guna2txtBuscar.BorderRadius = 7
+        Me.Guna2txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2txtBuscar.DefaultText = ""
+        Me.Guna2txtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Guna2txtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Guna2txtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2txtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2txtBuscar.FillColor = System.Drawing.SystemColors.Control
+        Me.Guna2txtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2txtBuscar.Font = New System.Drawing.Font("Franklin Gothic Book", 11.25!)
+        Me.Guna2txtBuscar.ForeColor = System.Drawing.Color.Black
+        Me.Guna2txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2txtBuscar.IconLeft = CType(resources.GetObject("Guna2txtBuscar.IconLeft"), System.Drawing.Image)
+        Me.Guna2txtBuscar.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.Guna2txtBuscar.Location = New System.Drawing.Point(17, 11)
+        Me.Guna2txtBuscar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Guna2txtBuscar.Name = "Guna2txtBuscar"
+        Me.Guna2txtBuscar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Guna2txtBuscar.PlaceholderForeColor = System.Drawing.Color.Gray
+        Me.Guna2txtBuscar.PlaceholderText = "Buscar..."
+        Me.Guna2txtBuscar.SelectedText = ""
+        Me.Guna2txtBuscar.Size = New System.Drawing.Size(283, 36)
+        Me.Guna2txtBuscar.TabIndex = 22
+        '
+        'Guna2DgbPuestos
+        '
+        Me.Guna2DgbPuestos.AllowUserToAddRows = False
+        Me.Guna2DgbPuestos.AllowUserToDeleteRows = False
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(203, Byte), Integer))
+        Me.Guna2DgbPuestos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        Me.Guna2DgbPuestos.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.Guna2DgbPuestos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Guna2DgbPuestos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.Guna2DgbPuestos.ColumnHeadersHeight = 40
+        Me.Guna2DgbPuestos.Cursor = System.Windows.Forms.Cursors.Hand
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Guna2DgbPuestos.DefaultCellStyle = DataGridViewCellStyle7
+        Me.Guna2DgbPuestos.GridColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
+        Me.Guna2DgbPuestos.Location = New System.Drawing.Point(17, 55)
+        Me.Guna2DgbPuestos.Name = "Guna2DgbPuestos"
+        Me.Guna2DgbPuestos.ReadOnly = True
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Transparent
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Guna2DgbPuestos.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        Me.Guna2DgbPuestos.RowHeadersVisible = False
+        Me.Guna2DgbPuestos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.Guna2DgbPuestos.Size = New System.Drawing.Size(581, 190)
+        Me.Guna2DgbPuestos.TabIndex = 23
+        Me.Guna2DgbPuestos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Green
+        Me.Guna2DgbPuestos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(203, Byte), Integer))
+        Me.Guna2DgbPuestos.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.Guna2DgbPuestos.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.Guna2DgbPuestos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.Guna2DgbPuestos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.Guna2DgbPuestos.ThemeStyle.BackColor = System.Drawing.SystemColors.Control
+        Me.Guna2DgbPuestos.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
+        Me.Guna2DgbPuestos.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
+        Me.Guna2DgbPuestos.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.Guna2DgbPuestos.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2DgbPuestos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.Guna2DgbPuestos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.Guna2DgbPuestos.ThemeStyle.HeaderStyle.Height = 40
+        Me.Guna2DgbPuestos.ThemeStyle.ReadOnly = True
+        Me.Guna2DgbPuestos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
+        Me.Guna2DgbPuestos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.Guna2DgbPuestos.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2DgbPuestos.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black
+        Me.Guna2DgbPuestos.ThemeStyle.RowsStyle.Height = 22
+        Me.Guna2DgbPuestos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.White
+        Me.Guna2DgbPuestos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
         '
         'frmPuestosTrabajo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(498, 453)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(712, 568)
+        Me.Controls.Add(Me.Guna2btnBorrar)
+        Me.Controls.Add(Me.Guna2btnEditar)
+        Me.Controls.Add(Me.Guna2btnGuardar)
+        Me.Controls.Add(Me.Guna2btnCancelar)
+        Me.Controls.Add(Me.Guna2btnNuevo)
+        Me.Controls.Add(Me.TxtId)
+        Me.Controls.Add(Me.Guna2TxtDescripcionP)
+        Me.Controls.Add(Me.Guna2tbNameP)
+        Me.Controls.Add(Me.Guna2btnExit)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BtnBuscar)
-        Me.Controls.Add(Me.BtnCancelar)
-        Me.Controls.Add(Me.BtnBorrar)
-        Me.Controls.Add(Me.BtnEditar)
-        Me.Controls.Add(Me.BtnGuardar)
-        Me.Controls.Add(Me.BtnNuevo)
-        Me.Controls.Add(Me.TxtId)
-        Me.Controls.Add(Me.TxtDescripcionP)
-        Me.Controls.Add(Me.TxtNombreP)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmPuestosTrabajo"
@@ -250,7 +412,7 @@ Partial Class frmPuestosTrabajo
         Me.Text = "Registro de puesto de trabajo"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DgbPuestos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2DgbPuestos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -259,21 +421,19 @@ Partial Class frmPuestosTrabajo
     Friend WithEvents Panel1 As Panel
     Friend WithEvents LblTotal As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TxtBuscar As TextBox
-    Friend WithEvents DgbPuestos As DataGridView
     Friend WithEvents BtnBuscar As Button
-    Friend WithEvents BtnCancelar As Button
-    Friend WithEvents BtnBorrar As Button
-    Friend WithEvents BtnEditar As Button
-    Friend WithEvents BtnGuardar As Button
-    Friend WithEvents BtnNuevo As Button
     Friend WithEvents TxtId As TextBox
-    Friend WithEvents TxtDescripcionP As TextBox
-    Friend WithEvents TxtNombreP As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents IdPuesto As DataGridViewTextBoxColumn
-    Friend WithEvents NombreP As DataGridViewTextBoxColumn
-    Friend WithEvents DescripcionP As DataGridViewTextBoxColumn
+    Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2btnExit As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2tbNameP As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2TxtDescripcionP As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2btnNuevo As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2btnCancelar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2btnGuardar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2btnEditar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2btnBorrar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2txtBuscar As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2DgbPuestos As Guna.UI2.WinForms.Guna2DataGridView
 End Class

@@ -22,6 +22,7 @@ Partial Class frmDescargoActivos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TxtIdEmpleado = New System.Windows.Forms.TextBox()
         Me.TxtIdArticulo = New System.Windows.Forms.TextBox()
         Me.TxtDescripcion = New System.Windows.Forms.TextBox()
@@ -69,6 +70,7 @@ Partial Class frmDescargoActivos
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
+        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.DgbActivosDescargados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -585,4 +587,5 @@ Partial Class frmDescargoActivos
     Friend WithEvents BtnEditar As Button
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnNuevo As Button
+    Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
 End Class

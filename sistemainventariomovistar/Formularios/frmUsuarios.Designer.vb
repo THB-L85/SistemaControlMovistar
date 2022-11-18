@@ -96,7 +96,8 @@ Partial Class frmUsuarios
         Me.Guna2txtSearch.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Guna2txtSearch.Name = "Guna2txtSearch"
         Me.Guna2txtSearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2txtSearch.PlaceholderText = ""
+        Me.Guna2txtSearch.PlaceholderForeColor = System.Drawing.Color.Gray
+        Me.Guna2txtSearch.PlaceholderText = "Buscar..."
         Me.Guna2txtSearch.SelectedText = ""
         Me.Guna2txtSearch.Size = New System.Drawing.Size(283, 36)
         Me.Guna2txtSearch.TabIndex = 20
