@@ -91,9 +91,9 @@ Public Class FrmBusquedaEmpleado
     Private Sub DgbEmpleados_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles Guna2DgbEmpleados.CellDoubleClick
         On Error Resume Next 'cuando se produce un error en tiempo de ejecucion esta instruccion se transfiere y no se interrumpe la ejecucion
         FrmEmpleados.TxtId.Text = CStr(Guna2DgbEmpleados.Item("IdEmpleado", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
-        FrmEmpleados.txtNombrecompleto.Text = CStr(Guna2DgbEmpleados.Item("Nombre", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
-        FrmEmpleados.TxtCurp.Text = CStr(Guna2DgbEmpleados.Item("Curp", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
-        FrmEmpleados.cboDepartamento.Text = CStr(Guna2DgbEmpleados.Item("NombreD", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
+        FrmEmpleados.Guna2TxtNombreC.Text = CStr(Guna2DgbEmpleados.Item("Nombre", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
+        FrmEmpleados.Guna2TxtCurp.Text = CStr(Guna2DgbEmpleados.Item("Curp", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
+        FrmEmpleados.Guna2CboDepto.Text = CStr(Guna2DgbEmpleados.Item("NombreD", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
         Me.Close()
 
     End Sub

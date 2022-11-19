@@ -24,9 +24,9 @@ Partial Class FrmCargoActivos
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCargoActivos))
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TxtId = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Guna2TxtBuscar = New Guna.UI2.WinForms.Guna2TextBox()
@@ -59,10 +59,10 @@ Partial Class FrmCargoActivos
         Me.Guna2BtnBuscar = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2BtnNuevo = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2BtnCancelar = New Guna.UI2.WinForms.Guna2Button()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2BtnExit = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.Guna2DgbCargoActivos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -84,9 +84,9 @@ Partial Class FrmCargoActivos
         Me.Panel1.Controls.Add(Me.Guna2RbNombreA)
         Me.Panel1.Controls.Add(Me.LblTotal)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(51, 288)
+        Me.Panel1.Location = New System.Drawing.Point(50, 288)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(926, 358)
+        Me.Panel1.Size = New System.Drawing.Size(931, 358)
         Me.Panel1.TabIndex = 84
         '
         'Guna2TxtBuscar
@@ -108,7 +108,7 @@ Partial Class FrmCargoActivos
         Me.Guna2TxtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TxtBuscar.IconLeft = CType(resources.GetObject("Guna2TxtBuscar.IconLeft"), System.Drawing.Image)
         Me.Guna2TxtBuscar.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.Guna2TxtBuscar.Location = New System.Drawing.Point(0, 4)
+        Me.Guna2TxtBuscar.Location = New System.Drawing.Point(1, 4)
         Me.Guna2TxtBuscar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Guna2TxtBuscar.Name = "Guna2TxtBuscar"
         Me.Guna2TxtBuscar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -143,30 +143,30 @@ Partial Class FrmCargoActivos
         '
         Me.Guna2DgbCargoActivos.AllowUserToAddRows = False
         Me.Guna2DgbCargoActivos.AllowUserToDeleteRows = False
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(203, Byte), Integer))
-        Me.Guna2DgbCargoActivos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(203, Byte), Integer))
+        Me.Guna2DgbCargoActivos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.Guna2DgbCargoActivos.BackgroundColor = System.Drawing.SystemColors.Control
         Me.Guna2DgbCargoActivos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Guna2DgbCargoActivos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Guna2DgbCargoActivos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.Guna2DgbCargoActivos.ColumnHeadersHeight = 40
         Me.Guna2DgbCargoActivos.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Guna2DgbCargoActivos.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Guna2DgbCargoActivos.DefaultCellStyle = DataGridViewCellStyle3
         Me.Guna2DgbCargoActivos.GridColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
-        Me.Guna2DgbCargoActivos.Location = New System.Drawing.Point(0, 51)
+        Me.Guna2DgbCargoActivos.Location = New System.Drawing.Point(1, 51)
         Me.Guna2DgbCargoActivos.Name = "Guna2DgbCargoActivos"
         Me.Guna2DgbCargoActivos.ReadOnly = True
         Me.Guna2DgbCargoActivos.RowHeadersVisible = False
@@ -706,24 +706,6 @@ Partial Class FrmCargoActivos
         Me.Guna2BtnCancelar.Size = New System.Drawing.Size(45, 45)
         Me.Guna2BtnCancelar.TabIndex = 133
         '
-        'Panel2
-        '
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1027, 20)
-        Me.Panel2.TabIndex = 134
-        '
-        'Label1
-        '
-        Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(465, 21)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(104, 24)
-        Me.Label1.TabIndex = 135
-        Me.Label1.Text = "Cargo Activos"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
         'Guna2BtnExit
         '
         Me.Guna2BtnExit.Animated = True
@@ -748,6 +730,24 @@ Partial Class FrmCargoActivos
         '
         Me.Guna2Elipse2.BorderRadius = 20
         Me.Guna2Elipse2.TargetControl = Me.Guna2DgbCargoActivos
+        '
+        'Panel2
+        '
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1027, 20)
+        Me.Panel2.TabIndex = 134
+        '
+        'Label1
+        '
+        Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(465, 21)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(104, 24)
+        Me.Label1.TabIndex = 135
+        Me.Label1.Text = "Cargo Activos"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'FrmCargoActivos
         '
@@ -825,8 +825,8 @@ Partial Class FrmCargoActivos
     Friend WithEvents Guna2DgbCargoActivos As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Guna2BtnCancelar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2BtnNuevo As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents Guna2BtnExit As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Label1 As Label
     Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Panel2 As Panel
 End Class

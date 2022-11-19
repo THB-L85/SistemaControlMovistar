@@ -220,4 +220,8 @@ Public Class frmPuestosTrabajo
         Guna2btnNuevo.Enabled = False
 
     End Sub
+
+    Private Sub Guna2btnExit_Click(sender As Object, e As EventArgs) Handles Guna2btnExit.Click
+        Me.Close()
+    End Sub
 End Class
