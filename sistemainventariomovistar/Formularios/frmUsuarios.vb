@@ -218,5 +218,6 @@ Public Class frmUsuarios
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Guna2btnExit.Click
         Me.Close()
+        FrmMain.Visible = True
     End Sub
 End Class

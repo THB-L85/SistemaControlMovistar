@@ -471,5 +471,6 @@ Public Class FrmCargoActivos
 
     Private Sub Guna2BtnExit_Click(sender As Object, e As EventArgs) Handles Guna2BtnExit.Click
         Me.Close()
+        FrmMain.Visible = True
     End Sub
 End Class

@@ -15,14 +15,14 @@ Public Class FrmLogin
                     Dim fila As DataRow = tabla.Rows(0)
                     Nombre = Trim(fila("NombreCompleto").ToString)
                     tipousuario = Trim(fila("TipoUsuario").ToString)
-                    formPrincipal.ToolStripStatusLabel2.Text = Nombre
-                    formPrincipal.ToolStripStatusLabel4.Text = tipousuario
+                    FrmMain.lblNombre.Text = Nombre
+                    FrmMain.lblTipo.Text = tipousuario
 
                     MsgBox("Datos verificados", vbInformation, "Operacion completada")
                     Guna2tbUser.Text = ""
                     Guna2tbPassword.Text = ""
                     Me.Hide()
-                    formPrincipal.Show()
+                    FrmMain.Show()
                 Else
                     MsgBox("Nombre de Usuario o contraseña no valido", vbExclamation, "Operacion Cancelada")
                     Guna2tbUser.Text = ""

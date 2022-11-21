@@ -346,12 +346,12 @@ Public Class FrmEmpleados
         frmDepartamentos.Show()
 
     End Sub
-    Dim frmPuestos As New frmPuestosTrabajo
-    Dim frmDepartamentos As New frmDepartamentos
+    'Dim frmPuestos As New frmPuestosTrabajo
+    'Dim frmDepartamentos As New frmDepartamentos
 
     Private Sub BtnPuesto_Click(sender As Object, e As EventArgs) Handles Guna2BtnPuesto.Click
-        frmPuestos.Show()
-
+        'frmPuestos.Show()
+        frmPuestosTrabajo.Show()
     End Sub
 
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles Guna2BtnCancelar.Click
@@ -366,5 +366,6 @@ Public Class FrmEmpleados
 
     Private Sub Guna2BtnExit_Click_1(sender As Object, e As EventArgs) Handles Guna2BtnExit.Click
         Me.Close()
+        FrmMain.Visible = True
     End Sub
 End Class

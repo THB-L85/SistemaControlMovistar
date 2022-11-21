@@ -53,3 +53,5 @@ C:\Users\Richi\Documents\Visual Studio 2022\Proyecto\sistemainventariomovistar\o
 C:\Users\Richi\Documents\Visual Studio 2022\Proyecto\sistemainventariomovistar\bin\Debug\sistemainventariomovistar.exe.manifest
 C:\Users\Richi\Documents\Visual Studio 2022\Proyecto\sistemainventariomovistar\bin\Debug\sistemainventariomovistar.application
 C:\Users\Richi\Documents\Visual Studio 2022\Proyecto\sistemainventariomovistar\obj\Debug\sistemainventariomovistar.application
+C:\Users\Richi\Documents\Visual Studio 2022\Proyecto\sistemainventariomovistar\obj\Debug\sistemainventariomovistar.FrmMain.resources
+C:\Users\Richi\Documents\Visual Studio 2022\Proyecto\sistemainventariomovistar\obj\Debug\sistemainventariomovistar.FrmSelecActivos.resources
