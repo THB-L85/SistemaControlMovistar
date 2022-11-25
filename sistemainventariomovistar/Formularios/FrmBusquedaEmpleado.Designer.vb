@@ -23,25 +23,26 @@ Partial Class FrmBusquedaEmpleado
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBusquedaEmpleado))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Guna2DgbEmpleados = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.Guna2TxtBuscar = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2RbDepartamento = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Guna2RbCurp = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Guna2RbNombreEmpleado = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.RbDepartamento = New System.Windows.Forms.RadioButton()
         Me.RbCurp = New System.Windows.Forms.RadioButton()
         Me.rbNombreEmpleado = New System.Windows.Forms.RadioButton()
+        Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.LblTotal = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Guna2RbNombreEmpleado = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Guna2RbCurp = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Guna2RbDepartamento = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Guna2TxtBuscar = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2DgbEmpleados = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.Guna2BtnExit = New Guna.UI2.WinForms.Guna2Button()
         Me.Panel1.SuspendLayout()
         CType(Me.Guna2DgbEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -62,199 +63,32 @@ Partial Class FrmBusquedaEmpleado
         Me.Panel1.Size = New System.Drawing.Size(773, 250)
         Me.Panel1.TabIndex = 34
         '
-        'RbDepartamento
-        '
-        Me.RbDepartamento.AutoSize = True
-        Me.RbDepartamento.Location = New System.Drawing.Point(410, 165)
-        Me.RbDepartamento.Name = "RbDepartamento"
-        Me.RbDepartamento.Size = New System.Drawing.Size(92, 17)
-        Me.RbDepartamento.TabIndex = 22
-        Me.RbDepartamento.Text = "Departamento"
-        Me.RbDepartamento.UseVisualStyleBackColor = True
-        '
-        'RbCurp
-        '
-        Me.RbCurp.AutoSize = True
-        Me.RbCurp.Location = New System.Drawing.Point(357, 165)
-        Me.RbCurp.Name = "RbCurp"
-        Me.RbCurp.Size = New System.Drawing.Size(47, 17)
-        Me.RbCurp.TabIndex = 21
-        Me.RbCurp.Text = "Curp"
-        Me.RbCurp.UseVisualStyleBackColor = True
-        '
-        'rbNombreEmpleado
-        '
-        Me.rbNombreEmpleado.AutoSize = True
-        Me.rbNombreEmpleado.Checked = True
-        Me.rbNombreEmpleado.Location = New System.Drawing.Point(244, 165)
-        Me.rbNombreEmpleado.Name = "rbNombreEmpleado"
-        Me.rbNombreEmpleado.Size = New System.Drawing.Size(106, 17)
-        Me.rbNombreEmpleado.TabIndex = 20
-        Me.rbNombreEmpleado.Text = "NombreCompleto"
-        Me.rbNombreEmpleado.UseVisualStyleBackColor = True
-        '
-        'LblTotal
-        '
-        Me.LblTotal.AutoSize = True
-        Me.LblTotal.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTotal.Location = New System.Drawing.Point(195, 319)
-        Me.LblTotal.Name = "LblTotal"
-        Me.LblTotal.Size = New System.Drawing.Size(35, 17)
-        Me.LblTotal.TabIndex = 19
-        Me.LblTotal.Text = "Total"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(51, 319)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(138, 17)
-        Me.Label2.TabIndex = 18
-        Me.Label2.Text = "Empleados Registrados"
-        '
-        'TxtBuscar
-        '
-        Me.TxtBuscar.Location = New System.Drawing.Point(221, 188)
-        Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(397, 20)
-        Me.TxtBuscar.TabIndex = 1
-        '
-        'Guna2Elipse1
-        '
-        Me.Guna2Elipse1.BorderRadius = 20
-        Me.Guna2Elipse1.TargetControl = Me
-        '
-        'Panel2
-        '
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(875, 20)
-        Me.Panel2.TabIndex = 35
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(375, 23)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(132, 24)
-        Me.Label1.TabIndex = 36
-        Me.Label1.Text = "Buscar Empleado"
-        '
-        'Guna2RbNombreEmpleado
-        '
-        Me.Guna2RbNombreEmpleado.AutoSize = True
-        Me.Guna2RbNombreEmpleado.Checked = True
-        Me.Guna2RbNombreEmpleado.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2RbNombreEmpleado.CheckedState.BorderThickness = 0
-        Me.Guna2RbNombreEmpleado.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2RbNombreEmpleado.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Guna2RbNombreEmpleado.CheckedState.InnerOffset = -4
-        Me.Guna2RbNombreEmpleado.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2RbNombreEmpleado.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!)
-        Me.Guna2RbNombreEmpleado.Location = New System.Drawing.Point(410, 10)
-        Me.Guna2RbNombreEmpleado.Name = "Guna2RbNombreEmpleado"
-        Me.Guna2RbNombreEmpleado.Size = New System.Drawing.Size(116, 20)
-        Me.Guna2RbNombreEmpleado.TabIndex = 24
-        Me.Guna2RbNombreEmpleado.Text = "Nombre Completo"
-        Me.Guna2RbNombreEmpleado.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Guna2RbNombreEmpleado.UncheckedState.BorderThickness = 2
-        Me.Guna2RbNombreEmpleado.UncheckedState.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2RbNombreEmpleado.UncheckedState.InnerColor = System.Drawing.Color.Transparent
-        '
-        'Guna2RbCurp
-        '
-        Me.Guna2RbCurp.AutoSize = True
-        Me.Guna2RbCurp.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2RbCurp.CheckedState.BorderThickness = 0
-        Me.Guna2RbCurp.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2RbCurp.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Guna2RbCurp.CheckedState.InnerOffset = -4
-        Me.Guna2RbCurp.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2RbCurp.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!)
-        Me.Guna2RbCurp.Location = New System.Drawing.Point(572, 10)
-        Me.Guna2RbCurp.Name = "Guna2RbCurp"
-        Me.Guna2RbCurp.Size = New System.Drawing.Size(49, 20)
-        Me.Guna2RbCurp.TabIndex = 25
-        Me.Guna2RbCurp.Text = "Curp"
-        Me.Guna2RbCurp.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Guna2RbCurp.UncheckedState.BorderThickness = 2
-        Me.Guna2RbCurp.UncheckedState.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2RbCurp.UncheckedState.InnerColor = System.Drawing.Color.Transparent
-        '
-        'Guna2RbDepartamento
-        '
-        Me.Guna2RbDepartamento.AutoSize = True
-        Me.Guna2RbDepartamento.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2RbDepartamento.CheckedState.BorderThickness = 0
-        Me.Guna2RbDepartamento.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2RbDepartamento.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Guna2RbDepartamento.CheckedState.InnerOffset = -4
-        Me.Guna2RbDepartamento.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2RbDepartamento.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!)
-        Me.Guna2RbDepartamento.Location = New System.Drawing.Point(664, 10)
-        Me.Guna2RbDepartamento.Name = "Guna2RbDepartamento"
-        Me.Guna2RbDepartamento.Size = New System.Drawing.Size(98, 20)
-        Me.Guna2RbDepartamento.TabIndex = 26
-        Me.Guna2RbDepartamento.Text = "Departamento"
-        Me.Guna2RbDepartamento.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Guna2RbDepartamento.UncheckedState.BorderThickness = 2
-        Me.Guna2RbDepartamento.UncheckedState.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2RbDepartamento.UncheckedState.InnerColor = System.Drawing.Color.Transparent
-        '
-        'Guna2TxtBuscar
-        '
-        Me.Guna2TxtBuscar.BorderRadius = 7
-        Me.Guna2TxtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TxtBuscar.DefaultText = ""
-        Me.Guna2TxtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TxtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TxtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TxtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TxtBuscar.FillColor = System.Drawing.SystemColors.Control
-        Me.Guna2TxtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TxtBuscar.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!)
-        Me.Guna2TxtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TxtBuscar.IconLeft = CType(resources.GetObject("Guna2TxtBuscar.IconLeft"), System.Drawing.Image)
-        Me.Guna2TxtBuscar.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.Guna2TxtBuscar.Location = New System.Drawing.Point(0, 4)
-        Me.Guna2TxtBuscar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TxtBuscar.Name = "Guna2TxtBuscar"
-        Me.Guna2TxtBuscar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TxtBuscar.PlaceholderForeColor = System.Drawing.Color.Gray
-        Me.Guna2TxtBuscar.PlaceholderText = "Buscar..."
-        Me.Guna2TxtBuscar.SelectedText = ""
-        Me.Guna2TxtBuscar.Size = New System.Drawing.Size(381, 36)
-        Me.Guna2TxtBuscar.TabIndex = 27
-        '
         'Guna2DgbEmpleados
         '
         Me.Guna2DgbEmpleados.AllowUserToAddRows = False
         Me.Guna2DgbEmpleados.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(203, Byte), Integer))
-        Me.Guna2DgbEmpleados.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(203, Byte), Integer))
+        Me.Guna2DgbEmpleados.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.Guna2DgbEmpleados.BackgroundColor = System.Drawing.SystemColors.Control
         Me.Guna2DgbEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Guna2DgbEmpleados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Guna2DgbEmpleados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.Guna2DgbEmpleados.ColumnHeadersHeight = 40
         Me.Guna2DgbEmpleados.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Guna2DgbEmpleados.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Guna2DgbEmpleados.DefaultCellStyle = DataGridViewCellStyle6
         Me.Guna2DgbEmpleados.GridColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
         Me.Guna2DgbEmpleados.Location = New System.Drawing.Point(0, 47)
         Me.Guna2DgbEmpleados.Name = "Guna2DgbEmpleados"
@@ -285,12 +119,202 @@ Partial Class FrmBusquedaEmpleado
         Me.Guna2DgbEmpleados.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.White
         Me.Guna2DgbEmpleados.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
         '
+        'Guna2TxtBuscar
+        '
+        Me.Guna2TxtBuscar.BorderRadius = 7
+        Me.Guna2TxtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2TxtBuscar.DefaultText = ""
+        Me.Guna2TxtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Guna2TxtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Guna2TxtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TxtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TxtBuscar.FillColor = System.Drawing.SystemColors.Control
+        Me.Guna2TxtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TxtBuscar.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!)
+        Me.Guna2TxtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TxtBuscar.IconLeft = CType(resources.GetObject("Guna2TxtBuscar.IconLeft"), System.Drawing.Image)
+        Me.Guna2TxtBuscar.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.Guna2TxtBuscar.Location = New System.Drawing.Point(0, 4)
+        Me.Guna2TxtBuscar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Guna2TxtBuscar.Name = "Guna2TxtBuscar"
+        Me.Guna2TxtBuscar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Guna2TxtBuscar.PlaceholderForeColor = System.Drawing.Color.Gray
+        Me.Guna2TxtBuscar.PlaceholderText = "Buscar..."
+        Me.Guna2TxtBuscar.SelectedText = ""
+        Me.Guna2TxtBuscar.Size = New System.Drawing.Size(381, 36)
+        Me.Guna2TxtBuscar.TabIndex = 27
+        '
+        'Guna2RbDepartamento
+        '
+        Me.Guna2RbDepartamento.AutoSize = True
+        Me.Guna2RbDepartamento.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbDepartamento.CheckedState.BorderThickness = 0
+        Me.Guna2RbDepartamento.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbDepartamento.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Guna2RbDepartamento.CheckedState.InnerOffset = -4
+        Me.Guna2RbDepartamento.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2RbDepartamento.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!)
+        Me.Guna2RbDepartamento.Location = New System.Drawing.Point(664, 10)
+        Me.Guna2RbDepartamento.Name = "Guna2RbDepartamento"
+        Me.Guna2RbDepartamento.Size = New System.Drawing.Size(98, 20)
+        Me.Guna2RbDepartamento.TabIndex = 26
+        Me.Guna2RbDepartamento.Text = "Departamento"
+        Me.Guna2RbDepartamento.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2RbDepartamento.UncheckedState.BorderThickness = 2
+        Me.Guna2RbDepartamento.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2RbDepartamento.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
+        'Guna2RbCurp
+        '
+        Me.Guna2RbCurp.AutoSize = True
+        Me.Guna2RbCurp.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbCurp.CheckedState.BorderThickness = 0
+        Me.Guna2RbCurp.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbCurp.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Guna2RbCurp.CheckedState.InnerOffset = -4
+        Me.Guna2RbCurp.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2RbCurp.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!)
+        Me.Guna2RbCurp.Location = New System.Drawing.Point(572, 10)
+        Me.Guna2RbCurp.Name = "Guna2RbCurp"
+        Me.Guna2RbCurp.Size = New System.Drawing.Size(49, 20)
+        Me.Guna2RbCurp.TabIndex = 25
+        Me.Guna2RbCurp.Text = "Curp"
+        Me.Guna2RbCurp.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2RbCurp.UncheckedState.BorderThickness = 2
+        Me.Guna2RbCurp.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2RbCurp.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
+        'Guna2RbNombreEmpleado
+        '
+        Me.Guna2RbNombreEmpleado.AutoSize = True
+        Me.Guna2RbNombreEmpleado.Checked = True
+        Me.Guna2RbNombreEmpleado.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbNombreEmpleado.CheckedState.BorderThickness = 0
+        Me.Guna2RbNombreEmpleado.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbNombreEmpleado.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Guna2RbNombreEmpleado.CheckedState.InnerOffset = -4
+        Me.Guna2RbNombreEmpleado.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2RbNombreEmpleado.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!)
+        Me.Guna2RbNombreEmpleado.Location = New System.Drawing.Point(410, 10)
+        Me.Guna2RbNombreEmpleado.Name = "Guna2RbNombreEmpleado"
+        Me.Guna2RbNombreEmpleado.Size = New System.Drawing.Size(116, 20)
+        Me.Guna2RbNombreEmpleado.TabIndex = 24
+        Me.Guna2RbNombreEmpleado.TabStop = True
+        Me.Guna2RbNombreEmpleado.Text = "Nombre Completo"
+        Me.Guna2RbNombreEmpleado.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2RbNombreEmpleado.UncheckedState.BorderThickness = 2
+        Me.Guna2RbNombreEmpleado.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2RbNombreEmpleado.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
+        'RbDepartamento
+        '
+        Me.RbDepartamento.AutoSize = True
+        Me.RbDepartamento.Location = New System.Drawing.Point(410, 165)
+        Me.RbDepartamento.Name = "RbDepartamento"
+        Me.RbDepartamento.Size = New System.Drawing.Size(92, 17)
+        Me.RbDepartamento.TabIndex = 22
+        Me.RbDepartamento.Text = "Departamento"
+        Me.RbDepartamento.UseVisualStyleBackColor = True
+        '
+        'RbCurp
+        '
+        Me.RbCurp.AutoSize = True
+        Me.RbCurp.Location = New System.Drawing.Point(357, 165)
+        Me.RbCurp.Name = "RbCurp"
+        Me.RbCurp.Size = New System.Drawing.Size(47, 17)
+        Me.RbCurp.TabIndex = 21
+        Me.RbCurp.Text = "Curp"
+        Me.RbCurp.UseVisualStyleBackColor = True
+        '
+        'rbNombreEmpleado
+        '
+        Me.rbNombreEmpleado.AutoSize = True
+        Me.rbNombreEmpleado.Checked = True
+        Me.rbNombreEmpleado.Location = New System.Drawing.Point(244, 165)
+        Me.rbNombreEmpleado.Name = "rbNombreEmpleado"
+        Me.rbNombreEmpleado.Size = New System.Drawing.Size(106, 17)
+        Me.rbNombreEmpleado.TabIndex = 20
+        Me.rbNombreEmpleado.TabStop = True
+        Me.rbNombreEmpleado.Text = "NombreCompleto"
+        Me.rbNombreEmpleado.UseVisualStyleBackColor = True
+        '
+        'TxtBuscar
+        '
+        Me.TxtBuscar.Location = New System.Drawing.Point(221, 188)
+        Me.TxtBuscar.Name = "TxtBuscar"
+        Me.TxtBuscar.Size = New System.Drawing.Size(397, 20)
+        Me.TxtBuscar.TabIndex = 1
+        '
+        'LblTotal
+        '
+        Me.LblTotal.AutoSize = True
+        Me.LblTotal.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTotal.Location = New System.Drawing.Point(195, 319)
+        Me.LblTotal.Name = "LblTotal"
+        Me.LblTotal.Size = New System.Drawing.Size(35, 17)
+        Me.LblTotal.TabIndex = 19
+        Me.LblTotal.Text = "Total"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(51, 319)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(138, 17)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "Empleados Registrados"
+        '
+        'Guna2Elipse1
+        '
+        Me.Guna2Elipse1.BorderRadius = 20
+        Me.Guna2Elipse1.TargetControl = Me
+        '
+        'Panel2
+        '
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(875, 20)
+        Me.Panel2.TabIndex = 35
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(375, 23)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(132, 24)
+        Me.Label1.TabIndex = 36
+        Me.Label1.Text = "Buscar Empleado"
+        '
+        'Guna2BtnExit
+        '
+        Me.Guna2BtnExit.Animated = True
+        Me.Guna2BtnExit.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2BtnExit.BackgroundImage = CType(resources.GetObject("Guna2BtnExit.BackgroundImage"), System.Drawing.Image)
+        Me.Guna2BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Guna2BtnExit.BorderRadius = 7
+        Me.Guna2BtnExit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2BtnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2BtnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2BtnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2BtnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2BtnExit.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2BtnExit.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!)
+        Me.Guna2BtnExit.ForeColor = System.Drawing.Color.White
+        Me.Guna2BtnExit.Location = New System.Drawing.Point(22, 15)
+        Me.Guna2BtnExit.Name = "Guna2BtnExit"
+        Me.Guna2BtnExit.Size = New System.Drawing.Size(45, 45)
+        Me.Guna2BtnExit.TabIndex = 151
+        '
         'FrmBusquedaEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(875, 347)
+        Me.Controls.Add(Me.Guna2BtnExit)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -325,4 +349,5 @@ Partial Class FrmBusquedaEmpleado
     Friend WithEvents Guna2RbNombreEmpleado As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents Guna2TxtBuscar As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2DgbEmpleados As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents Guna2BtnExit As Guna.UI2.WinForms.Guna2Button
 End Class

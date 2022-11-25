@@ -89,12 +89,25 @@ Public Class FrmBusquedaEmpleado
     Dim FrmEmpleados As New FrmEmpleados
 
     Private Sub DgbEmpleados_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles Guna2DgbEmpleados.CellDoubleClick
-        On Error Resume Next 'cuando se produce un error en tiempo de ejecucion esta instruccion se transfiere y no se interrumpe la ejecucion
-        FrmEmpleados.TxtId.Text = CStr(Guna2DgbEmpleados.Item("IdEmpleado", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
-        FrmEmpleados.Guna2TxtNombreC.Text = CStr(Guna2DgbEmpleados.Item("Nombre", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
-        FrmEmpleados.Guna2TxtCurp.Text = CStr(Guna2DgbEmpleados.Item("Curp", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
-        FrmEmpleados.Guna2CboDepto.Text = CStr(Guna2DgbEmpleados.Item("NombreD", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
-        Me.Close()
+        'On Error Resume Next 'cuando se produce un error en tiempo de ejecucion esta instruccion se transfiere y no se interrumpe la ejecucion
+        'FrmEmpleados.TxtId.Text = CStr(Guna2DgbEmpleados.Item("IdEmpleado", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
+        'FrmEmpleados.Guna2TxtNombreC.Text = CStr(Guna2DgbEmpleados.Item("Nombre", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
+        'FrmEmpleados.Guna2TxtCurp.Text = CStr(Guna2DgbEmpleados.Item("Curp", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
+        'FrmEmpleados.Guna2CboDepto.Text = CStr(Guna2DgbEmpleados.Item("NombreD", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
 
+        Me.Close()
+        Try
+            FrmCargoActivos.TxtId.Text = CStr(Guna2DgbEmpleados.Item("IdEmpleado", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
+            FrmCargoActivos.Guna2TxtNombreE.Text = CStr(Guna2DgbEmpleados.Item("Nombre", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
+            FrmCargoActivos.Guna2TxtCurp.Text = CStr(Guna2DgbEmpleados.Item("Curp", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
+            FrmCargoActivos.Guna2TxtDepartamento.Text = CStr(Guna2DgbEmpleados.Item("NombreD", Guna2DgbEmpleados.CurrentCell.RowIndex).Value)
+        Catch ex As Exception
+            MsgBox("Se ha encontrado el siguiente error ", ex.ToString + "Sistema inventario")
+        End Try
+    End Sub
+
+    Private Sub Guna2BtnExit_Click(sender As Object, e As EventArgs) Handles Guna2BtnExit.Click
+        Me.Close()
+        FrmCargoActivos.Visible = True
     End Sub
 End Class

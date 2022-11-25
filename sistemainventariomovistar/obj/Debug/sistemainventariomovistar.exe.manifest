@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sistemainventariomovistar.exe" size="1929728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sistemainventariomovistar.exe" size="1958912">
       <assemblyIdentity name="sistemainventariomovistar" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cHthU29jjZPsRkJBdvm3/Iz/QKvRxowIC1aTt2a1U2s=</dsig:DigestValue>
+        <dsig:DigestValue>+H7oUyDo9SqbvE6NENlcwLWuYayAuUfACzld5txQECw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

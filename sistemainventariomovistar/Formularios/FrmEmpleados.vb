@@ -343,14 +343,15 @@ Public Class FrmEmpleados
     End Sub
 
     Private Sub BtnDepartamento_Click(sender As Object, e As EventArgs) Handles Guna2BtnDepto.Click
+        Me.Visible = False
         frmDepartamentos.Show()
-
     End Sub
     'Dim frmPuestos As New frmPuestosTrabajo
     'Dim frmDepartamentos As New frmDepartamentos
 
     Private Sub BtnPuesto_Click(sender As Object, e As EventArgs) Handles Guna2BtnPuesto.Click
         'frmPuestos.Show()
+        Me.Visible = False
         frmPuestosTrabajo.Show()
     End Sub
 

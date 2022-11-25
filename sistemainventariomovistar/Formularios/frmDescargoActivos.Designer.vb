@@ -23,14 +23,19 @@ Partial Class frmDescargoActivos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDescargoActivos))
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TxtIdEmpleado = New System.Windows.Forms.TextBox()
         Me.TxtIdArticulo = New System.Windows.Forms.TextBox()
         Me.TxtId = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Guna2DgbDescargoActivos = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.Guna2RbCodigoA = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Guna2RbFecha = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Guna2RbNombreA = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Guna2TxtBuscar = New Guna.UI2.WinForms.Guna2TextBox()
         Me.LblTotal = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
@@ -58,11 +63,6 @@ Partial Class frmDescargoActivos
         Me.Guna2BtnBorrar = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2BntEditar = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2BtnGuardar = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2TxtBuscar = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2RbCodigoA = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Guna2RbFecha = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Guna2RbNombreA = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Guna2DgbDescargoActivos = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Panel1.SuspendLayout()
         CType(Me.Guna2DgbDescargoActivos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -104,6 +104,156 @@ Partial Class frmDescargoActivos
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(931, 358)
         Me.Panel1.TabIndex = 118
+        '
+        'Guna2DgbDescargoActivos
+        '
+        Me.Guna2DgbDescargoActivos.AllowUserToAddRows = False
+        Me.Guna2DgbDescargoActivos.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(203, Byte), Integer))
+        Me.Guna2DgbDescargoActivos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.Guna2DgbDescargoActivos.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.Guna2DgbDescargoActivos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Guna2DgbDescargoActivos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.Guna2DgbDescargoActivos.ColumnHeadersHeight = 40
+        Me.Guna2DgbDescargoActivos.Cursor = System.Windows.Forms.Cursors.Hand
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Guna2DgbDescargoActivos.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Guna2DgbDescargoActivos.GridColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
+        Me.Guna2DgbDescargoActivos.Location = New System.Drawing.Point(1, 51)
+        Me.Guna2DgbDescargoActivos.Name = "Guna2DgbDescargoActivos"
+        Me.Guna2DgbDescargoActivos.ReadOnly = True
+        Me.Guna2DgbDescargoActivos.RowHeadersVisible = False
+        Me.Guna2DgbDescargoActivos.Size = New System.Drawing.Size(926, 281)
+        Me.Guna2DgbDescargoActivos.TabIndex = 140
+        Me.Guna2DgbDescargoActivos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Green
+        Me.Guna2DgbDescargoActivos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(203, Byte), Integer))
+        Me.Guna2DgbDescargoActivos.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.Guna2DgbDescargoActivos.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.Guna2DgbDescargoActivos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.Guna2DgbDescargoActivos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.Guna2DgbDescargoActivos.ThemeStyle.BackColor = System.Drawing.SystemColors.Control
+        Me.Guna2DgbDescargoActivos.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
+        Me.Guna2DgbDescargoActivos.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
+        Me.Guna2DgbDescargoActivos.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.Guna2DgbDescargoActivos.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2DgbDescargoActivos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.Guna2DgbDescargoActivos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.Guna2DgbDescargoActivos.ThemeStyle.HeaderStyle.Height = 40
+        Me.Guna2DgbDescargoActivos.ThemeStyle.ReadOnly = True
+        Me.Guna2DgbDescargoActivos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
+        Me.Guna2DgbDescargoActivos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.Guna2DgbDescargoActivos.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2DgbDescargoActivos.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black
+        Me.Guna2DgbDescargoActivos.ThemeStyle.RowsStyle.Height = 22
+        Me.Guna2DgbDescargoActivos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.White
+        Me.Guna2DgbDescargoActivos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
+        '
+        'Guna2RbCodigoA
+        '
+        Me.Guna2RbCodigoA.Animated = True
+        Me.Guna2RbCodigoA.AutoSize = True
+        Me.Guna2RbCodigoA.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbCodigoA.CheckedState.BorderThickness = 0
+        Me.Guna2RbCodigoA.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbCodigoA.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Guna2RbCodigoA.CheckedState.InnerOffset = -4
+        Me.Guna2RbCodigoA.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2RbCodigoA.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!)
+        Me.Guna2RbCodigoA.Location = New System.Drawing.Point(736, 15)
+        Me.Guna2RbCodigoA.Name = "Guna2RbCodigoA"
+        Me.Guna2RbCodigoA.Size = New System.Drawing.Size(116, 20)
+        Me.Guna2RbCodigoA.TabIndex = 139
+        Me.Guna2RbCodigoA.Text = "Código de Artículo"
+        Me.Guna2RbCodigoA.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2RbCodigoA.UncheckedState.BorderThickness = 2
+        Me.Guna2RbCodigoA.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2RbCodigoA.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
+        'Guna2RbFecha
+        '
+        Me.Guna2RbFecha.Animated = True
+        Me.Guna2RbFecha.AutoSize = True
+        Me.Guna2RbFecha.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbFecha.CheckedState.BorderThickness = 0
+        Me.Guna2RbFecha.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbFecha.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Guna2RbFecha.CheckedState.InnerOffset = -4
+        Me.Guna2RbFecha.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2RbFecha.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!)
+        Me.Guna2RbFecha.Location = New System.Drawing.Point(675, 15)
+        Me.Guna2RbFecha.Name = "Guna2RbFecha"
+        Me.Guna2RbFecha.Size = New System.Drawing.Size(55, 20)
+        Me.Guna2RbFecha.TabIndex = 138
+        Me.Guna2RbFecha.Text = "Fecha"
+        Me.Guna2RbFecha.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2RbFecha.UncheckedState.BorderThickness = 2
+        Me.Guna2RbFecha.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2RbFecha.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
+        'Guna2RbNombreA
+        '
+        Me.Guna2RbNombreA.Animated = True
+        Me.Guna2RbNombreA.AutoSize = True
+        Me.Guna2RbNombreA.Checked = True
+        Me.Guna2RbNombreA.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbNombreA.CheckedState.BorderThickness = 0
+        Me.Guna2RbNombreA.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2RbNombreA.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Guna2RbNombreA.CheckedState.InnerOffset = -4
+        Me.Guna2RbNombreA.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Guna2RbNombreA.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!)
+        Me.Guna2RbNombreA.Location = New System.Drawing.Point(532, 15)
+        Me.Guna2RbNombreA.Name = "Guna2RbNombreA"
+        Me.Guna2RbNombreA.Size = New System.Drawing.Size(133, 20)
+        Me.Guna2RbNombreA.TabIndex = 137
+        Me.Guna2RbNombreA.TabStop = True
+        Me.Guna2RbNombreA.Text = "Nombre de Empleado"
+        Me.Guna2RbNombreA.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2RbNombreA.UncheckedState.BorderThickness = 2
+        Me.Guna2RbNombreA.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2RbNombreA.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
+        'Guna2TxtBuscar
+        '
+        Me.Guna2TxtBuscar.Animated = True
+        Me.Guna2TxtBuscar.BorderColor = System.Drawing.Color.Black
+        Me.Guna2TxtBuscar.BorderRadius = 7
+        Me.Guna2TxtBuscar.BorderThickness = 0
+        Me.Guna2TxtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2TxtBuscar.DefaultText = ""
+        Me.Guna2TxtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Guna2TxtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Guna2TxtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TxtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TxtBuscar.FillColor = System.Drawing.SystemColors.Control
+        Me.Guna2TxtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TxtBuscar.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!)
+        Me.Guna2TxtBuscar.ForeColor = System.Drawing.Color.Black
+        Me.Guna2TxtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TxtBuscar.IconLeft = CType(resources.GetObject("Guna2TxtBuscar.IconLeft"), System.Drawing.Image)
+        Me.Guna2TxtBuscar.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.Guna2TxtBuscar.Location = New System.Drawing.Point(1, 4)
+        Me.Guna2TxtBuscar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Guna2TxtBuscar.Name = "Guna2TxtBuscar"
+        Me.Guna2TxtBuscar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Guna2TxtBuscar.PlaceholderForeColor = System.Drawing.Color.Gray
+        Me.Guna2TxtBuscar.PlaceholderText = "Buscar.."
+        Me.Guna2TxtBuscar.SelectedText = ""
+        Me.Guna2TxtBuscar.Size = New System.Drawing.Size(456, 36)
+        Me.Guna2TxtBuscar.TabIndex = 136
         '
         'LblTotal
         '
@@ -594,156 +744,6 @@ Partial Class frmDescargoActivos
         Me.Guna2BtnGuardar.Size = New System.Drawing.Size(141, 35)
         Me.Guna2BtnGuardar.TabIndex = 166
         Me.Guna2BtnGuardar.Text = "Guardar"
-        '
-        'Guna2TxtBuscar
-        '
-        Me.Guna2TxtBuscar.Animated = True
-        Me.Guna2TxtBuscar.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TxtBuscar.BorderRadius = 7
-        Me.Guna2TxtBuscar.BorderThickness = 0
-        Me.Guna2TxtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TxtBuscar.DefaultText = ""
-        Me.Guna2TxtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TxtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TxtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TxtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TxtBuscar.FillColor = System.Drawing.SystemColors.Control
-        Me.Guna2TxtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TxtBuscar.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!)
-        Me.Guna2TxtBuscar.ForeColor = System.Drawing.Color.Black
-        Me.Guna2TxtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TxtBuscar.IconLeft = CType(resources.GetObject("Guna2TxtBuscar.IconLeft"), System.Drawing.Image)
-        Me.Guna2TxtBuscar.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.Guna2TxtBuscar.Location = New System.Drawing.Point(1, 4)
-        Me.Guna2TxtBuscar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TxtBuscar.Name = "Guna2TxtBuscar"
-        Me.Guna2TxtBuscar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TxtBuscar.PlaceholderForeColor = System.Drawing.Color.Gray
-        Me.Guna2TxtBuscar.PlaceholderText = "Buscar.."
-        Me.Guna2TxtBuscar.SelectedText = ""
-        Me.Guna2TxtBuscar.Size = New System.Drawing.Size(456, 36)
-        Me.Guna2TxtBuscar.TabIndex = 136
-        '
-        'Guna2RbCodigoA
-        '
-        Me.Guna2RbCodigoA.Animated = True
-        Me.Guna2RbCodigoA.AutoSize = True
-        Me.Guna2RbCodigoA.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2RbCodigoA.CheckedState.BorderThickness = 0
-        Me.Guna2RbCodigoA.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2RbCodigoA.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Guna2RbCodigoA.CheckedState.InnerOffset = -4
-        Me.Guna2RbCodigoA.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2RbCodigoA.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!)
-        Me.Guna2RbCodigoA.Location = New System.Drawing.Point(736, 15)
-        Me.Guna2RbCodigoA.Name = "Guna2RbCodigoA"
-        Me.Guna2RbCodigoA.Size = New System.Drawing.Size(116, 20)
-        Me.Guna2RbCodigoA.TabIndex = 139
-        Me.Guna2RbCodigoA.Text = "Código de Artículo"
-        Me.Guna2RbCodigoA.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Guna2RbCodigoA.UncheckedState.BorderThickness = 2
-        Me.Guna2RbCodigoA.UncheckedState.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2RbCodigoA.UncheckedState.InnerColor = System.Drawing.Color.Transparent
-        '
-        'Guna2RbFecha
-        '
-        Me.Guna2RbFecha.Animated = True
-        Me.Guna2RbFecha.AutoSize = True
-        Me.Guna2RbFecha.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2RbFecha.CheckedState.BorderThickness = 0
-        Me.Guna2RbFecha.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2RbFecha.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Guna2RbFecha.CheckedState.InnerOffset = -4
-        Me.Guna2RbFecha.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2RbFecha.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!)
-        Me.Guna2RbFecha.Location = New System.Drawing.Point(675, 15)
-        Me.Guna2RbFecha.Name = "Guna2RbFecha"
-        Me.Guna2RbFecha.Size = New System.Drawing.Size(55, 20)
-        Me.Guna2RbFecha.TabIndex = 138
-        Me.Guna2RbFecha.Text = "Fecha"
-        Me.Guna2RbFecha.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Guna2RbFecha.UncheckedState.BorderThickness = 2
-        Me.Guna2RbFecha.UncheckedState.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2RbFecha.UncheckedState.InnerColor = System.Drawing.Color.Transparent
-        '
-        'Guna2RbNombreA
-        '
-        Me.Guna2RbNombreA.Animated = True
-        Me.Guna2RbNombreA.AutoSize = True
-        Me.Guna2RbNombreA.Checked = True
-        Me.Guna2RbNombreA.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2RbNombreA.CheckedState.BorderThickness = 0
-        Me.Guna2RbNombreA.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2RbNombreA.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Guna2RbNombreA.CheckedState.InnerOffset = -4
-        Me.Guna2RbNombreA.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2RbNombreA.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!)
-        Me.Guna2RbNombreA.Location = New System.Drawing.Point(532, 15)
-        Me.Guna2RbNombreA.Name = "Guna2RbNombreA"
-        Me.Guna2RbNombreA.Size = New System.Drawing.Size(133, 20)
-        Me.Guna2RbNombreA.TabIndex = 137
-        Me.Guna2RbNombreA.TabStop = True
-        Me.Guna2RbNombreA.Text = "Nombre de Empleado"
-        Me.Guna2RbNombreA.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Guna2RbNombreA.UncheckedState.BorderThickness = 2
-        Me.Guna2RbNombreA.UncheckedState.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2RbNombreA.UncheckedState.InnerColor = System.Drawing.Color.Transparent
-        '
-        'Guna2DgbDescargoActivos
-        '
-        Me.Guna2DgbDescargoActivos.AllowUserToAddRows = False
-        Me.Guna2DgbDescargoActivos.AllowUserToDeleteRows = False
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(203, Byte), Integer))
-        Me.Guna2DgbDescargoActivos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
-        Me.Guna2DgbDescargoActivos.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.Guna2DgbDescargoActivos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Guna2DgbDescargoActivos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
-        Me.Guna2DgbDescargoActivos.ColumnHeadersHeight = 40
-        Me.Guna2DgbDescargoActivos.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Guna2DgbDescargoActivos.DefaultCellStyle = DataGridViewCellStyle9
-        Me.Guna2DgbDescargoActivos.GridColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
-        Me.Guna2DgbDescargoActivos.Location = New System.Drawing.Point(1, 51)
-        Me.Guna2DgbDescargoActivos.Name = "Guna2DgbDescargoActivos"
-        Me.Guna2DgbDescargoActivos.ReadOnly = True
-        Me.Guna2DgbDescargoActivos.RowHeadersVisible = False
-        Me.Guna2DgbDescargoActivos.Size = New System.Drawing.Size(926, 281)
-        Me.Guna2DgbDescargoActivos.TabIndex = 140
-        Me.Guna2DgbDescargoActivos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Green
-        Me.Guna2DgbDescargoActivos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(203, Byte), Integer))
-        Me.Guna2DgbDescargoActivos.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.Guna2DgbDescargoActivos.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.Guna2DgbDescargoActivos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.Guna2DgbDescargoActivos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.Guna2DgbDescargoActivos.ThemeStyle.BackColor = System.Drawing.SystemColors.Control
-        Me.Guna2DgbDescargoActivos.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
-        Me.Guna2DgbDescargoActivos.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
-        Me.Guna2DgbDescargoActivos.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.Guna2DgbDescargoActivos.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2DgbDescargoActivos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.Guna2DgbDescargoActivos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.Guna2DgbDescargoActivos.ThemeStyle.HeaderStyle.Height = 40
-        Me.Guna2DgbDescargoActivos.ThemeStyle.ReadOnly = True
-        Me.Guna2DgbDescargoActivos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
-        Me.Guna2DgbDescargoActivos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.Guna2DgbDescargoActivos.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2DgbDescargoActivos.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black
-        Me.Guna2DgbDescargoActivos.ThemeStyle.RowsStyle.Height = 22
-        Me.Guna2DgbDescargoActivos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.White
-        Me.Guna2DgbDescargoActivos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
         '
         'frmDescargoActivos
         '

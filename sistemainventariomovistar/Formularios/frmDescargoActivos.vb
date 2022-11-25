@@ -122,9 +122,233 @@ Public Class frmDescargoActivos
             End If
         End If
     End Sub
+    Sub buscardatos()
+        If Guna2RbNombreA.Checked Then
+            If Guna2TxtBuscar.Text = " " Then
+                Llenardatos()
 
+            End If
+            adaptador = New SqlDataAdapter("SELECT CargoActivos.IdCargo,CargoActivos.CodigoInventario,
+              Articulo.NombreA,Articulo.IdArticulo,Articulo.NumeroSerie,
+              Empleados.Nombre,Empleados.Curp,Departamentos.NombreD,
+              DescargoActivos.IdDescargo,DescargoActivos.FechaDescargo,DescargoActivos.motivo,
+              DescargoActivos.Descripcion FROM Articulo
+              INNER JOIN CargoActivos ON Articulo.IdArticulo = CargoActivos.IdArticulo
+              INNER JOIN Empleados ON CargoActivos.IdEmpleado = Empleados.IdEmpleado
+              INNER JOIN Departamentos ON Empleados.IdDepartamento = departamentos.IdDepartamento
+              INNER JOIN DescargoActivos ON CargoActivos.Idcargo = DescargoActivos.IdCargoActivo
+              WHERE Empleados.Nombre Like '%" & Guna2TxtBuscar.Text & "%' ", obtenerconexion)
+            tabla.Clear()
+            adaptador.Fill(tabla)
+            If tabla.Rows.Count > 0 Then
+                Guna2DgbDescargoActivos.DataSource = tabla
+                LblTotal.Text = tabla.Rows.Count
+            Else
+                Guna2DgbDescargoActivos.DataSource = ""
+            End If
+
+        End If
+        If Guna2RbFecha.Checked Then
+            If Guna2TxtBuscar.Text = " " Then
+                Llenardatos()
+
+            End If
+            adaptador = New SqlDataAdapter("SELECT CargoActivos.IdCargo,CargoActivos.CodigoInventario,
+              Articulo.NombreA,Articulo.IdArticulo,Articulo.NumeroSerie,
+              Empleados.Nombre,Empleados.Curp,Departamentos.NombreD,
+              DescargoActivos.IdDescargo,DescargoActivos.FechaDescargo,DescargoActivos.motivo,
+              DescargoActivos.Descripcion FROM Articulo
+              INNER JOIN CargoActivos ON Articulo.IdArticulo = CargoActivos.IdArticulo
+              INNER JOIN Empleados ON CargoActivos.IdEmpleado = Empleados.IdEmpleado
+              INNER JOIN Departamentos ON Empleados.IdDepartamento = departamentos.IdDepartamento
+              INNER JOIN DescargoActivos ON CargoActivos.Idcargo = DescargoActivos.IdCargoActivo WHERE DescargoActivos.FechaDescargo LIKE '%" & Guna2TxtBuscar.Text & "%' ", obtenerconexion)
+            tabla.Clear()
+            adaptador.Fill(tabla)
+            If tabla.Rows.Count > 0 Then
+                Guna2DgbDescargoActivos.DataSource = tabla
+                LblTotal.Text = tabla.Rows.Count
+            Else
+                Guna2DgbDescargoActivos.DataSource = ""
+            End If
+        End If
+        If Guna2RbCodigoA.Checked Then
+            If Guna2TxtBuscar.Text = " " Then
+                Llenardatos()
+
+            End If
+            adaptador = New SqlDataAdapter("SELECT CargoActivos.IdCargo,CargoActivos.CodigoInventario,
+              Articulo.NombreA,Articulo.IdArticulo,Articulo.NumeroSerie,
+              Empleados.Nombre,Empleados.Curp,Departamentos.NombreD,
+              DescargoActivos.IdDescargo,DescargoActivos.FechaDescargo,DescargoActivos.motivo,
+              DescargoActivos.Descripcion FROM Articulo
+              INNER JOIN CargoActivos ON Articulo.IdArticulo = CargoActivos.IdArticulo
+              INNER JOIN Empleados ON CargoActivos.IdEmpleado = Empleados.IdEmpleado
+              INNER JOIN Departamentos ON Empleados.IdDepartamento = departamentos.IdDepartamento
+              INNER JOIN DescargoActivos ON CargoActivos.Idcargo = DescargoActivos.IdCargoActivo WHERE Articulo.CodigoA LIKE '%" & Guna2TxtBuscar.Text & "%' ", obtenerconexion)
+            tabla.Clear()
+            adaptador.Fill(tabla)
+            If tabla.Rows.Count > 0 Then
+                Guna2DgbDescargoActivos.DataSource = tabla
+                LblTotal.Text = tabla.Rows.Count
+            Else
+                Guna2DgbDescargoActivos.DataSource = ""
+            End If
+        End If
+    End Sub
+    Sub Llenardatos()
+        Dim sql As String
+        sql = "SELECT CargoActivos.IdCargo,CargoActivos.CodigoInventario,
+              Articulo.NombreA,Articulo.IdArticulo,Articulo.NumeroSerie,
+              Empleados.Nombre,Empleados.Curp,Departamentos.NombreD,
+              DescargoActivos.IdDescargo,DescargoActivos.FechaDescargo,DescargoActivos.motivo,
+              DescargoActivos.Descripcion FROM Articulo
+              INNER JOIN CargoActivos ON Articulo.IdArticulo = CargoActivos.IdArticulo
+              INNER JOIN Empleados ON CargoActivos.IdEmpleado = Empleados.IdEmpleado
+              INNER JOIN Departamentos ON Empleados.IdDepartamento = departamentos.IdDepartamento
+              INNER JOIN DescargoActivos ON CargoActivos.Idcargo = DescargoActivos.IdCargoActivo"
+        Try
+            Dim tabla As New DataTable
+            adaptador = New SqlDataAdapter(sql, obtenerconexion)
+            adaptador.Fill(tabla)
+            Guna2DgbDescargoActivos.DataSource = tabla
+            LblTotal.Text = tabla.Rows.Count
+
+        Catch ex As Exception
+            MsgBox("Se ha encontrado el siguiente error ", ex.ToString + "Sistema inventario")
+        End Try
+    End Sub
+    Sub insertar()
+        Dim sql As String
+        Dim id As Integer
+        If MsgBox("Guardar Nuevo Registro", vbQuestion + vbYesNo, "Sistema de inventario") = vbNo Then
+            Exit Sub
+
+        End If
+        adaptador = New SqlDataAdapter("SELECT CargoActivos.CodigoInventario  FROM CargoActivos
+        INNER JOIN DescargoActivos On CargoActivos.IdCargo = DescargoActivos.IdCargoActivo
+        WHERE CargoActivos.CodigoInventario = '" & Guna2TxtCodigoInv.Text & "' ", obtenerconexion)
+        tabla.Clear() 'borra datos que trae datatable
+        adaptador.Fill(tabla) 'actualiza o agrega dataset
+        If tabla.Rows.Count > 0 Then
+            Guna2TxtCodigoInv.Text = tabla.Rows(0).Item("CodigoInventario")
+            MsgBox("El registro ya se encuentra en la base de datos ", vbInformation, "Sistema inventario")
+            Exit Sub
+
+        End If
+        If TxtIdArticulo.Text = "" Or TxtIdCargo.Text = "" Or DTPFechaDescargo.Text = "" Or Guna2CboMotivo.Text = "" Then
+            MsgBox("Completar todos los campos", vbCritical, "Sistema inventario")
+            Exit Sub
+        Else
+            sql = "INSERT INTO DescargoActivos(FechaDescargo,Descripcion,motivo,IdCargoActivo) VALUES
+           ('" & DTPFechaDescargo.Text & "','" & TxtDescripcion.Text & "','" & Guna2CboMotivo.Text & "','" & TxtIdCargo.Text & "')"
+
+            Dim conect As New SqlConnection(obtenerconexion)
+            conect.Open()
+            Using comando As New SqlCommand(sql, conect)
+                id = comando.ExecuteScalar()
+            End Using
+            conect.Close()
+            MsgBox("Registro realizado correctamente", vbInformation, "Sistema inventario")
+        End If
+
+    End Sub
+    Sub EliminarCargo()
+        Dim id As Integer
+
+        Dim sql As String
+        sql = "UPDATE CargoActivos SET EstadoArticulo = 'ELIMINADO' WHERE IdCargo = " & Trim(TxtIdCargo.Text)
+        Dim conect As New SqlConnection(obtenerconexion)
+        conect.Open()
+        Using comando As New SqlCommand(sql, conect)
+            id = comando.ExecuteScalar()
+        End Using
+        conect.Close()
+    End Sub
+    Sub modificararticuloPendiente()
+
+        Dim id As Integer
+
+        Dim sql As String
+        sql = "UPDATE Articulo SET EstadoArticulo ='PENDIENTE' WHERE IdArticulo= '" & TxtIdArticulo.Text & "'"
+        Dim conect As New SqlConnection(obtenerconexion)
+        conect.Open()
+        Using comando As New SqlCommand(sql, conect)
+            id = comando.ExecuteScalar()
+        End Using
+        conect.Close()
+    End Sub
+    Sub modificararticuloCompletado()
+
+        Dim id As Integer
+
+        Dim sql As String
+        sql = "UPDATE Articulo SET EstadoArticulo ='COMPLETADO' WHERE IdArticulo= '" & TxtIdArticulo.Text & "'"
+        Dim conect As New SqlConnection(obtenerconexion)
+        conect.Open()
+        Using comando As New SqlCommand(sql, conect)
+            id = comando.ExecuteScalar()
+        End Using
+        conect.Close()
+    End Sub
     Private Sub Guna2BtnExit_Click(sender As Object, e As EventArgs) Handles Guna2BtnExit.Click
         Me.Close()
         FrmMain.Visible = True
+    End Sub
+
+    Private Sub Guna2TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles Guna2TxtBuscar.TextChanged
+        buscardatos()
+    End Sub
+
+    Private Sub Guna2DgbDescargoActivos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles Guna2DgbDescargoActivos.CellDoubleClick
+        On Error Resume Next
+
+        TxtIdArticulo.Text = CStr(Guna2DgbDescargoActivos.Item("IdArticulo", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+        Guna2TxtNombreArt.Text = CStr(Guna2DgbDescargoActivos.Item("NombreA", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+        Guna2TxtNSerie.Text = CStr(Guna2DgbDescargoActivos.Item("NumeroSerie", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+
+        TxtIdEmpleado.Text = CStr(Guna2DgbDescargoActivos.Item("IdEmpleado", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+        Guna2TxtCurp.Text = CStr(Guna2DgbDescargoActivos.Item("Curp", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+        Guna2TxtNombreE.Text = CStr(Guna2DgbDescargoActivos.Item("Nombre", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+        TxtDepartamento.Text = CStr(Guna2DgbDescargoActivos.Item("NombreD", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+
+
+        TxtIdCargo.Text = CStr(Guna2DgbDescargoActivos.Item("IdCargo", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+        TxtIdDescargo.Text = CStr(Guna2DgbDescargoActivos.Item("IdDescargo", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+        Guna2TxtCodigoInv.Text = CStr(Guna2DgbDescargoActivos.Item("CodigoInventario", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+        Guna2CboMotivo.Text = CStr(Guna2DgbDescargoActivos.Item("motivo", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+        TxtDescripcion.Text = CStr(Guna2DgbDescargoActivos.Item("Descripcion", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+        Guna2DTPFechaEntrega.Text = CStr(Guna2DgbDescargoActivos.Item("fechaAsignacion", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+        DTPFechaDescargo.Text = CStr(Guna2DgbDescargoActivos.Item("FechaDescargo", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+        BtnCancelar.Enabled = True
+        Btncodigoinv.Enabled = True
+        BtnEditar.Enabled = True
+        BtnBorrar.Enabled = True
+
+        Guna2TxtNombreArt.Enabled = True
+        TxtIdArticulo.Enabled = True
+        Guna2TxtNSerie.Enabled = True
+
+        Guna2TxtNombreE.Enabled = True
+        Guna2TxtCurp.Enabled = True
+        TxtDepartamento.Enabled = True
+
+        TxtDescripcion.Enabled = True
+        Guna2DTPFechaEntrega.Enabled = True
+        DTPFechaDescargo.Enabled = True
+        Guna2CboMotivo.Enabled = True
+        Guna2TxtCodigoInv.Enabled = True
+        'TxtCodigo.Focus()
+        BtnBuscar.Enabled = False
+        BtnNuevo.Enabled = False
+
+    End Sub
+
+    Private Sub Guna2BtnCodigoInv_Click(sender As Object, e As EventArgs) Handles Guna2BtnCodigoInv.Click
+        FrmBusquedaActivos.Show()
+    End Sub
+
+    Private Sub Guna2BntEditar_Click(sender As Object, e As EventArgs) Handles Guna2BntEditar.Click
+        desactivarcontroles()
+        Llenardatos()
     End Sub
 End Class

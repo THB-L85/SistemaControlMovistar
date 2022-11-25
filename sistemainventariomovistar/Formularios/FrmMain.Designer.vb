@@ -27,8 +27,8 @@ Partial Class FrmMain
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lblNombre = New System.Windows.Forms.Label()
         Me.lblTipo = New System.Windows.Forms.Label()
+        Me.lblNombre = New System.Windows.Forms.Label()
         Me.Guna2BtnUsuario = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2BtnEmpleados = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2BtnArticulos = New Guna.UI2.WinForms.Guna2Button()
@@ -69,6 +69,17 @@ Partial Class FrmMain
         Me.Panel1.Size = New System.Drawing.Size(263, 49)
         Me.Panel1.TabIndex = 1
         '
+        'lblTipo
+        '
+        Me.lblTipo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lblTipo.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTipo.Location = New System.Drawing.Point(0, 21)
+        Me.lblTipo.Name = "lblTipo"
+        Me.lblTipo.Size = New System.Drawing.Size(263, 28)
+        Me.lblTipo.TabIndex = 1
+        Me.lblTipo.Text = "TipoUsuario"
+        Me.lblTipo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'lblNombre
         '
         Me.lblNombre.Dock = System.Windows.Forms.DockStyle.Top
@@ -80,17 +91,6 @@ Partial Class FrmMain
         Me.lblNombre.TabIndex = 0
         Me.lblNombre.Text = "Nombre Completo"
         Me.lblNombre.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'lblTipo
-        '
-        Me.lblTipo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblTipo.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTipo.Location = New System.Drawing.Point(0, 21)
-        Me.lblTipo.Name = "lblTipo"
-        Me.lblTipo.Size = New System.Drawing.Size(263, 28)
-        Me.lblTipo.TabIndex = 1
-        Me.lblTipo.Text = "TipoUsuario"
-        Me.lblTipo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Guna2BtnUsuario
         '
@@ -174,17 +174,19 @@ Partial Class FrmMain
         Me.Guna2BtnPuestos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2BtnPuestos.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2BtnPuestos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2BtnPuestos.Enabled = False
         Me.Guna2BtnPuestos.FillColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.Guna2BtnPuestos.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!)
         Me.Guna2BtnPuestos.ForeColor = System.Drawing.Color.White
         Me.Guna2BtnPuestos.Image = CType(resources.GetObject("Guna2BtnPuestos.Image"), System.Drawing.Image)
         Me.Guna2BtnPuestos.ImageSize = New System.Drawing.Size(65, 65)
-        Me.Guna2BtnPuestos.Location = New System.Drawing.Point(161, 442)
+        Me.Guna2BtnPuestos.Location = New System.Drawing.Point(83, 497)
         Me.Guna2BtnPuestos.Name = "Guna2BtnPuestos"
-        Me.Guna2BtnPuestos.Size = New System.Drawing.Size(225, 225)
+        Me.Guna2BtnPuestos.Size = New System.Drawing.Size(120, 114)
         Me.Guna2BtnPuestos.TabIndex = 5
         Me.Guna2BtnPuestos.Text = "Puestos"
         Me.Guna2BtnPuestos.TextOffset = New System.Drawing.Point(4, 0)
+        Me.Guna2BtnPuestos.Visible = False
         '
         'Guna2BtnActivos
         '
@@ -203,7 +205,7 @@ Partial Class FrmMain
         Me.Guna2BtnActivos.ForeColor = System.Drawing.Color.White
         Me.Guna2BtnActivos.Image = CType(resources.GetObject("Guna2BtnActivos.Image"), System.Drawing.Image)
         Me.Guna2BtnActivos.ImageSize = New System.Drawing.Size(70, 70)
-        Me.Guna2BtnActivos.Location = New System.Drawing.Point(420, 442)
+        Me.Guna2BtnActivos.Location = New System.Drawing.Point(292, 442)
         Me.Guna2BtnActivos.Name = "Guna2BtnActivos"
         Me.Guna2BtnActivos.Size = New System.Drawing.Size(225, 225)
         Me.Guna2BtnActivos.TabIndex = 6
@@ -227,7 +229,7 @@ Partial Class FrmMain
         Me.Guna2BtnPortabilidades.ForeColor = System.Drawing.Color.White
         Me.Guna2BtnPortabilidades.Image = CType(resources.GetObject("Guna2BtnPortabilidades.Image"), System.Drawing.Image)
         Me.Guna2BtnPortabilidades.ImageSize = New System.Drawing.Size(70, 70)
-        Me.Guna2BtnPortabilidades.Location = New System.Drawing.Point(673, 442)
+        Me.Guna2BtnPortabilidades.Location = New System.Drawing.Point(545, 442)
         Me.Guna2BtnPortabilidades.Name = "Guna2BtnPortabilidades"
         Me.Guna2BtnPortabilidades.Size = New System.Drawing.Size(225, 225)
         Me.Guna2BtnPortabilidades.TabIndex = 7

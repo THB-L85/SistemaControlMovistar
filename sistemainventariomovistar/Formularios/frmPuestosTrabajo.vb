@@ -223,6 +223,6 @@ Public Class frmPuestosTrabajo
 
     Private Sub Guna2btnExit_Click(sender As Object, e As EventArgs) Handles Guna2btnExit.Click
         Me.Close()
-        FrmMain.Visible = True
+        FrmEmpleados.Visible = True
     End Sub
 End Class

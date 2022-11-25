@@ -100,4 +100,9 @@ Public Class FrmBuscarArticulos
         Me.Close()
 
     End Sub
+
+    Private Sub Guna2BtnExit_Click(sender As Object, e As EventArgs) Handles Guna2BtnExit.Click
+        Me.Close()
+        FrmcargoActivos.Visible = True
+    End Sub
 End Class

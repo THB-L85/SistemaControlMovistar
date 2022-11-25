@@ -367,13 +367,11 @@ Public Class FrmCargoActivos
     Private Sub Btncodigo_Click(sender As Object, e As EventArgs) Handles Guna2Btncodigo.Click
         Dim frmbusquedaarticulos As New FrmBuscarArticulos
         frmbusquedaarticulos.ShowDialog()
-
-
+        Me.Visible = False
     End Sub
     Dim FrmBusquedaEmpleado As New FrmBusquedaEmpleado
 
     Private Sub BtnCurp_Click(sender As Object, e As EventArgs) Handles Guna2BtnCurp.Click
-
         FrmBusquedaEmpleado.ShowDialog()
     End Sub
 
