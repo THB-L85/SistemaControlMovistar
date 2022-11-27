@@ -84,13 +84,13 @@ Public Class frmDescargoActivos
         Return ListarDatos
     End Function
 
-    Private Sub BtnNuevo_Click(sender As Object, e As EventArgs)
+    Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles Guna2BtnNuevo.Click
         activarcontroles()
         limpiarcontroles()
 
     End Sub
 
-    Private Sub BtnCancelar_Click(sender As Object, e As EventArgs)
+    Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles Guna2BtnCancelar.Click
         desactivarcontroles()
         limpiarcontroles()
 
@@ -235,12 +235,12 @@ Public Class frmDescargoActivos
             Exit Sub
 
         End If
-        If TxtIdArticulo.Text = "" Or TxtIdCargo.Text = "" Or DTPFechaDescargo.Text = "" Or Guna2CboMotivo.Text = "" Then
+        If TxtIdArticulo.Text = "" Or TxtIdCargo.Text = "" Or Guna2DtpDescargo.Text = "" Or Guna2CboMotivo.Text = "" Then
             MsgBox("Completar todos los campos", vbCritical, "Sistema inventario")
             Exit Sub
         Else
             sql = "INSERT INTO DescargoActivos(FechaDescargo,Descripcion,motivo,IdCargoActivo) VALUES
-           ('" & DTPFechaDescargo.Text & "','" & TxtDescripcion.Text & "','" & Guna2CboMotivo.Text & "','" & TxtIdCargo.Text & "')"
+           ('" & Guna2DtpDescargo.Text & "','" & Guna2TxtDescripcion.Text & "','" & Guna2CboMotivo.Text & "','" & TxtIdCargo.Text & "')"
 
             Dim conect As New SqlConnection(obtenerconexion)
             conect.Open()
@@ -309,20 +309,20 @@ Public Class frmDescargoActivos
         TxtIdEmpleado.Text = CStr(Guna2DgbDescargoActivos.Item("IdEmpleado", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
         Guna2TxtCurp.Text = CStr(Guna2DgbDescargoActivos.Item("Curp", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
         Guna2TxtNombreE.Text = CStr(Guna2DgbDescargoActivos.Item("Nombre", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
-        TxtDepartamento.Text = CStr(Guna2DgbDescargoActivos.Item("NombreD", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+        Guna2TxtDepartamento.Text = CStr(Guna2DgbDescargoActivos.Item("NombreD", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
 
 
         TxtIdCargo.Text = CStr(Guna2DgbDescargoActivos.Item("IdCargo", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
         TxtIdDescargo.Text = CStr(Guna2DgbDescargoActivos.Item("IdDescargo", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
         Guna2TxtCodigoInv.Text = CStr(Guna2DgbDescargoActivos.Item("CodigoInventario", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
         Guna2CboMotivo.Text = CStr(Guna2DgbDescargoActivos.Item("motivo", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
-        TxtDescripcion.Text = CStr(Guna2DgbDescargoActivos.Item("Descripcion", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+        Guna2TxtDescripcion.Text = CStr(Guna2DgbDescargoActivos.Item("Descripcion", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
         Guna2DTPFechaEntrega.Text = CStr(Guna2DgbDescargoActivos.Item("fechaAsignacion", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
-        DTPFechaDescargo.Text = CStr(Guna2DgbDescargoActivos.Item("FechaDescargo", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
-        BtnCancelar.Enabled = True
-        Btncodigoinv.Enabled = True
-        BtnEditar.Enabled = True
-        BtnBorrar.Enabled = True
+        Guna2DtpDescargo.Text = CStr(Guna2DgbDescargoActivos.Item("FechaDescargo", Guna2DgbDescargoActivos.CurrentCell.RowIndex).Value)
+        Guna2BtnCancelar.Enabled = True
+        Guna2BtnCodigoInv.Enabled = True
+        Guna2BntEditar.Enabled = True
+        Guna2BtnBorrar.Enabled = True
 
         Guna2TxtNombreArt.Enabled = True
         TxtIdArticulo.Enabled = True
@@ -330,16 +330,16 @@ Public Class frmDescargoActivos
 
         Guna2TxtNombreE.Enabled = True
         Guna2TxtCurp.Enabled = True
-        TxtDepartamento.Enabled = True
+        Guna2TxtDepartamento.Enabled = True
 
-        TxtDescripcion.Enabled = True
+        Guna2TxtDescripcion.Enabled = True
         Guna2DTPFechaEntrega.Enabled = True
-        DTPFechaDescargo.Enabled = True
+        Guna2DtpDescargo.Enabled = True
         Guna2CboMotivo.Enabled = True
         Guna2TxtCodigoInv.Enabled = True
         'TxtCodigo.Focus()
-        BtnBuscar.Enabled = False
-        BtnNuevo.Enabled = False
+        Guna2BtnBuscar.Enabled = False
+        Guna2BtnNuevo.Enabled = False
 
     End Sub
 
@@ -350,5 +350,24 @@ Public Class frmDescargoActivos
     Private Sub Guna2BntEditar_Click(sender As Object, e As EventArgs) Handles Guna2BntEditar.Click
         desactivarcontroles()
         Llenardatos()
+    End Sub
+
+    Private Sub Guna2BtnGuardar_Click(sender As Object, e As EventArgs) Handles Guna2BtnGuardar.Click
+        If Guna2CboMotivo.Text = "COMPLETADO" Then
+            insertar()
+            EliminarCargo()
+            modificararticuloCompletado()
+            Llenardatos()
+            desactivarcontroles()
+            limpiarcontroles()
+        Else
+            insertar()
+            EliminarCargo()
+            modificararticuloPendiente()
+            Llenardatos()
+            desactivarcontroles()
+            limpiarcontroles()
+
+        End If
     End Sub
 End Class

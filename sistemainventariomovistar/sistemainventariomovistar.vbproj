@@ -119,6 +119,12 @@
     <Compile Include="Formularios\FrmBuscarArticulos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\FrmBusquedaActivos.Designer.vb">
+      <DependentUpon>FrmBusquedaActivos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmBusquedaActivos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmBusquedaEmpleado.Designer.vb">
       <DependentUpon>FrmBusquedaEmpleado.vb</DependentUpon>
     </Compile>
@@ -227,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmBuscarArticulos.resx">
       <DependentUpon>FrmBuscarArticulos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmBusquedaActivos.resx">
+      <DependentUpon>FrmBusquedaActivos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmBusquedaEmpleado.resx">
       <DependentUpon>FrmBusquedaEmpleado.vb</DependentUpon>

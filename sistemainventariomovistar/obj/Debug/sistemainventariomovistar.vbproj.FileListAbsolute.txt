@@ -55,3 +55,4 @@ C:\Users\Richi\Documents\Visual Studio 2022\Proyecto\sistemainventariomovistar\b
 C:\Users\Richi\Documents\Visual Studio 2022\Proyecto\sistemainventariomovistar\obj\Debug\sistemainventariomovistar.application
 C:\Users\Richi\Documents\Visual Studio 2022\Proyecto\sistemainventariomovistar\obj\Debug\sistemainventariomovistar.FrmMain.resources
 C:\Users\Richi\Documents\Visual Studio 2022\Proyecto\sistemainventariomovistar\obj\Debug\sistemainventariomovistar.FrmSelecActivos.resources
+C:\Users\Richi\Documents\Visual Studio 2022\Proyecto\sistemainventariomovistar\obj\Debug\sistemainventariomovistar.FrmBusquedaActivos.resources

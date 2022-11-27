@@ -23,13 +23,13 @@ Partial Class frmDescargoActivos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDescargoActivos))
         Me.TxtIdEmpleado = New System.Windows.Forms.TextBox()
         Me.TxtIdArticulo = New System.Windows.Forms.TextBox()
-        Me.TxtId = New System.Windows.Forms.TextBox()
+        Me.TxtIdCargo = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Guna2DgbDescargoActivos = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2RbCodigoA = New Guna.UI2.WinForms.Guna2RadioButton()
@@ -46,7 +46,6 @@ Partial Class frmDescargoActivos
         Me.Guna2TxtDescripcion = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2TxtDepartamento = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2TxtCurp = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2BtnCurp = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2BtnCodigoInv = New Guna.UI2.WinForms.Guna2Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Guna2DTPFechaEntrega = New Guna.UI2.WinForms.Guna2DateTimePicker()
@@ -63,6 +62,7 @@ Partial Class frmDescargoActivos
         Me.Guna2BtnBorrar = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2BntEditar = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2BtnGuardar = New Guna.UI2.WinForms.Guna2Button()
+        Me.txtIdDescargo = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.Guna2DgbDescargoActivos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -83,13 +83,13 @@ Partial Class frmDescargoActivos
         Me.TxtIdArticulo.TabIndex = 138
         Me.TxtIdArticulo.Visible = False
         '
-        'TxtId
+        'TxtIdCargo
         '
-        Me.TxtId.Location = New System.Drawing.Point(527, 60)
-        Me.TxtId.Name = "TxtId"
-        Me.TxtId.Size = New System.Drawing.Size(32, 20)
-        Me.TxtId.TabIndex = 119
-        Me.TxtId.Visible = False
+        Me.TxtIdCargo.Location = New System.Drawing.Point(527, 60)
+        Me.TxtIdCargo.Name = "TxtIdCargo"
+        Me.TxtIdCargo.Size = New System.Drawing.Size(32, 20)
+        Me.TxtIdCargo.TabIndex = 119
+        Me.TxtIdCargo.Visible = False
         '
         'Panel1
         '
@@ -109,28 +109,28 @@ Partial Class frmDescargoActivos
         '
         Me.Guna2DgbDescargoActivos.AllowUserToAddRows = False
         Me.Guna2DgbDescargoActivos.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(203, Byte), Integer))
-        Me.Guna2DgbDescargoActivos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(203, Byte), Integer))
+        Me.Guna2DgbDescargoActivos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
         Me.Guna2DgbDescargoActivos.BackgroundColor = System.Drawing.SystemColors.Control
         Me.Guna2DgbDescargoActivos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Guna2DgbDescargoActivos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(63, Byte), Integer))
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Guna2DgbDescargoActivos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.Guna2DgbDescargoActivos.ColumnHeadersHeight = 40
         Me.Guna2DgbDescargoActivos.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Guna2DgbDescargoActivos.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Guna2DgbDescargoActivos.DefaultCellStyle = DataGridViewCellStyle12
         Me.Guna2DgbDescargoActivos.GridColor = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(228, Byte), Integer))
         Me.Guna2DgbDescargoActivos.Location = New System.Drawing.Point(1, 51)
         Me.Guna2DgbDescargoActivos.Name = "Guna2DgbDescargoActivos"
@@ -421,24 +421,6 @@ Partial Class frmDescargoActivos
         Me.Guna2TxtCurp.SelectedText = ""
         Me.Guna2TxtCurp.Size = New System.Drawing.Size(150, 36)
         Me.Guna2TxtCurp.TabIndex = 152
-        '
-        'Guna2BtnCurp
-        '
-        Me.Guna2BtnCurp.Animated = True
-        Me.Guna2BtnCurp.BorderRadius = 7
-        Me.Guna2BtnCurp.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2BtnCurp.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2BtnCurp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2BtnCurp.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2BtnCurp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2BtnCurp.FillColor = System.Drawing.SystemColors.Control
-        Me.Guna2BtnCurp.Font = New System.Drawing.Font("Franklin Gothic Demi", 12.0!)
-        Me.Guna2BtnCurp.ForeColor = System.Drawing.Color.Black
-        Me.Guna2BtnCurp.Location = New System.Drawing.Point(211, 133)
-        Me.Guna2BtnCurp.Name = "Guna2BtnCurp"
-        Me.Guna2BtnCurp.Size = New System.Drawing.Size(42, 36)
-        Me.Guna2BtnCurp.TabIndex = 156
-        Me.Guna2BtnCurp.Text = "..."
         '
         'Guna2BtnCodigoInv
         '
@@ -745,12 +727,21 @@ Partial Class frmDescargoActivos
         Me.Guna2BtnGuardar.TabIndex = 166
         Me.Guna2BtnGuardar.Text = "Guardar"
         '
+        'txtIdDescargo
+        '
+        Me.txtIdDescargo.Location = New System.Drawing.Point(565, 60)
+        Me.txtIdDescargo.Name = "txtIdDescargo"
+        Me.txtIdDescargo.Size = New System.Drawing.Size(32, 20)
+        Me.txtIdDescargo.TabIndex = 172
+        Me.txtIdDescargo.Visible = False
+        '
         'frmDescargoActivos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1027, 661)
+        Me.Controls.Add(Me.txtIdDescargo)
         Me.Controls.Add(Me.Guna2BtnCancelar)
         Me.Controls.Add(Me.Guna2BtnNuevo)
         Me.Controls.Add(Me.Guna2BtnBuscar)
@@ -766,7 +757,6 @@ Partial Class frmDescargoActivos
         Me.Controls.Add(Me.Guna2DTPFechaEntrega)
         Me.Controls.Add(Me.Guna2TxtNombreE)
         Me.Controls.Add(Me.Guna2TxtNombreArt)
-        Me.Controls.Add(Me.Guna2BtnCurp)
         Me.Controls.Add(Me.Guna2BtnCodigoInv)
         Me.Controls.Add(Me.Guna2TxtDescripcion)
         Me.Controls.Add(Me.Guna2TxtDepartamento)
@@ -777,7 +767,7 @@ Partial Class frmDescargoActivos
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.TxtIdEmpleado)
         Me.Controls.Add(Me.TxtIdArticulo)
-        Me.Controls.Add(Me.TxtId)
+        Me.Controls.Add(Me.TxtIdCargo)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
@@ -794,7 +784,7 @@ Partial Class frmDescargoActivos
 
     Friend WithEvents TxtIdEmpleado As TextBox
     Friend WithEvents TxtIdArticulo As TextBox
-    Friend WithEvents TxtId As TextBox
+    Friend WithEvents TxtIdCargo As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents LblTotal As Label
     Friend WithEvents Label2 As Label
@@ -806,7 +796,6 @@ Partial Class frmDescargoActivos
     Friend WithEvents Guna2TxtDescripcion As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2TxtDepartamento As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2TxtCurp As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2BtnCurp As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2BtnCodigoInv As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label10 As Label
     Friend WithEvents Guna2DTPFechaEntrega As Guna.UI2.WinForms.Guna2DateTimePicker
@@ -828,4 +817,5 @@ Partial Class frmDescargoActivos
     Friend WithEvents Guna2RbFecha As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents Guna2RbNombreA As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents Guna2DgbDescargoActivos As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents txtIdDescargo As TextBox
 End Class
